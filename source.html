@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Three Origins of Reality: A Unified Framework for Matter, Cognition, and Life</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600&family=STIX+Two+Text:ital,wght@0,400;0,600;1,400&display=swap');
+
+:root {
+  --ink:#1a1a1a; --ink-soft:#333; --ink-light:#666; --ink-faint:#999;
+  --paper:#fdfcf8; --paper-warm:#f6f3ec; --paper-deep:#efe9db;
+  --accent:#7a5c00; --accent-mid:#a8802e; --accent-light:#cbb06a;
+  --rule:#d8d2c2; --rule-light:#e8e3d5;
+  --red:#a02020; --blue:#1a4a7a; --green:#2a6a3a;
+  --highlight:#faf6ea;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:'Noto Serif SC','Songti SC','STSong',serif;
+  background:var(--paper);color:var(--ink);line-height:1.92;font-size:15.5px;
+  max-width:800px;margin:0 auto;padding:64px 56px 120px;
+}
+/* Title */
+.title-block{text-align:center;margin-bottom:44px;padding-bottom:32px;border-bottom:2.5px solid var(--accent);}
+.title-block .journal{font-size:11px;letter-spacing:3px;color:var(--accent);font-family:'Noto Sans SC',sans-serif;font-weight:600;text-transform:uppercase;margin-bottom:18px;}
+.title-block h1{font-size:25px;font-weight:700;line-height:1.5;letter-spacing:0.5px;margin-bottom:14px;}
+.title-block .subtitle{font-size:14.5px;color:var(--ink-light);line-height:1.6;}
+.title-block .meta{margin-top:22px;font-size:12px;color:var(--ink-faint);font-family:'Noto Sans SC',sans-serif;}
+/* Abstract */
+.abstract{background:var(--paper-warm);border-left:3px solid var(--accent);padding:22px 26px;margin:36px 0;font-size:14px;line-height:1.82;color:var(--ink-soft);}
+.abstract .label{font-weight:700;color:var(--accent);font-size:12px;letter-spacing:2px;margin-bottom:8px;display:block;font-family:'Noto Sans SC',sans-serif;}
+.abstract p{text-indent:0;margin-bottom:10px;}
+.abstract .keywords{margin-top:12px;font-size:12.5px;color:var(--ink-light);font-family:'Noto Sans SC',sans-serif;}
+.abstract .keywords b{color:var(--accent);}
+/* Headings */
+h2{font-size:19px;font-weight:700;color:var(--ink);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid var(--rule);letter-spacing:0.5px;}
+h2 .num{color:var(--accent);margin-right:6px;font-family:'STIX Two Text',serif;}
+h3{font-size:16px;font-weight:600;color:var(--ink);margin:30px 0 12px;}
+h4{font-size:14.5px;font-weight:600;color:var(--accent);margin:22px 0 10px;font-family:'Noto Sans SC',sans-serif;}
+/* Body */
+p{margin-bottom:16px;text-align:justify;text-indent:2em;}
+p.no-indent{text-indent:0;}
+/* Definition */
+.def{border:1px solid var(--rule);border-left:3px solid var(--accent);border-radius:3px;padding:16px 22px;margin:22px 0;background:var(--paper);}
+.def .term{font-weight:700;color:var(--accent);font-size:15px;}
+.def .formal{font-family:'STIX Two Text','Noto Serif SC',serif;font-style:italic;color:var(--ink-soft);margin-top:6px;font-size:14px;}
+/* Math */
+.math{display:block;text-align:center;margin:16px 0;font-family:'STIX Two Text',serif;font-size:15px;color:var(--ink);}
+.math-inline{font-family:'STIX Two Text',serif;font-style:italic;}
+/* Key statement */
+.key{margin:24px 0;padding:16px 24px;background:var(--highlight);border:1px solid var(--accent-light);border-radius:2px;font-size:14.5px;text-indent:0;line-height:1.8;}
+.key .origin{font-weight:700;color:var(--accent);font-size:17px;}
+/* Figure */
+.figure{margin:34px 0;text-align:center;}
+.figure .caption{font-size:12.5px;color:var(--ink-light);font-family:'Noto Sans SC',sans-serif;margin-top:10px;text-indent:0;line-height:1.6;}
+.figure .caption b{color:var(--accent);}
+/* Table */
+table{width:100%;border-collapse:collapse;margin:24px 0;font-size:13px;}
+th,td{border:1px solid var(--rule);padding:9px 12px;text-align:left;line-height:1.55;vertical-align:top;}
+th{background:var(--paper-deep);font-weight:600;color:var(--accent);letter-spacing:0.5px;font-family:'Noto Sans SC',sans-serif;font-size:12.5px;}
+td.center{text-align:center;}
+/* List */
+ol.refs{font-size:12.5px;color:var(--ink-soft);line-height:1.75;font-family:'Noto Sans SC',sans-serif;list-style-type:decimal;padding-left:1.5em;}
+ol.refs li{margin-bottom:8px;text-indent:0;}
+ul.body-list{margin:12px 0 16px 2em;padding-left:1em;}
+ul.body-list li{margin-bottom:7px;line-height:1.85;text-indent:0;}
+/* Highlight box */
+.pred{background:var(--paper-warm);border:1px solid var(--rule);border-radius:4px;padding:16px 22px;margin:20px 0;}
+.pred .tag{display:inline-block;background:var(--accent);color:var(--paper);font-size:11px;font-weight:600;padding:2px 10px;border-radius:2px;margin-right:8px;font-family:'Noto Sans SC',sans-serif;letter-spacing:1px;}
+/* Strong */
+strong{font-weight:600;}
+em.term{font-style:normal;font-weight:600;color:var(--accent);}
+.divider{text-align:center;margin:36px 0;color:var(--accent-light);letter-spacing:6px;font-size:13px;}
+.references{margin-top:46px;padding-top:22px;border-top:2px solid var(--accent);}
+.references h2{border:none;padding-bottom:0;}
+svg{max-width:100%;height:auto;}
+</style>
+</head>
+<body>
+
+<!-- ============ TITLE ============ -->
+<div class="title-block">
+  <div class="journal">Perspective · Theoretical Framework</div>
+  <h1>世界三本源论：物质、认知与生命的统一涌现框架</h1>
+  <div class="subtitle">Three Origins of Reality: A Unified Emergence Framework<br>for Matter, Cognition, and Life</div>
+  <div class="meta">原创理论框架 · 2026年7月 · 预印本</div>
+</div>
+
+<!-- ============ ABSTRACT ============ -->
+<div class="abstract">
+  <span class="label">Abstract</span>
+  <p class="no-indent">本文提出"世界三本源"（Three Origins of Reality, TOR）理论框架，以三个四字命题刻画实在的三个根基层次：<strong>物存物动</strong>（物质存在且运动）、<strong>异存同驱</strong>（存储异质表征并以统一机制驱动）、<strong>利存物属</strong>（为利于自身存在而扩充所属物质以应对非自身）。三本源分别构成世界、智慧与生命的涌现条件，且按通用性递减构成嵌套包含关系：世界 ⊃ 智慧 ⊃ 生命。本文给出每个本源的形式化定义，建立"异质度—统一度"二维智慧度量，并将利存物属与自创生理论（autopoiesis）、自由能原理（free energy principle）和薛定谔负熵命题进行严格对标。基于此框架，本文论证：(1) 智慧不依赖生命——非生物系统（人工神经网络、晶体生长、自然选择、物理定律演化）均满足异存同驱结构；(2) 生命必然以智慧为前提——自我维护的每一步都依赖信息处理；(3) 当前人工智能系统已具备异存同驱但完全缺乏利存物属，其最深层缺口在于"利"——从自身存在中生长出的存续驱力，该缺口无法还原为目标函数。框架产出四条可检验预测，涉及非生物智慧的信息论标志、生命起源的相变特征、AI 的特征性失效模式，以及意识涌现的必要条件。</p>
+  <div class="keywords"><b>Keywords:</b> 存在论 · 涌现 · 异存同驱 · 利存物属 · 自创生 · 自由能原理 · 生命起源 · 人工智能</div>
+</div>
+
+<!-- ============ 1 INTRODUCTION ============ -->
+<h2><span class="num">1</span>引言</h2>
+
+<p>复杂系统科学的核心挑战之一是：物质、认知与生命这三类现象能否被纳入统一的理论框架？现有进路各有侧重但各有盲区。物理主义将一切还原为物质运动，但难以解释目的性与规范性<sup>[1]</sup>；功能主义以信息处理定义认知，却无法清晰划定生命与智慧的边界<sup>[2]</sup>；自创生理论（autopoiesis）以自我维护定义生命，但其认知维度未被充分形式化<sup>[3]</sup>；自由能原理（FEP）统一了感知与行动<sup>[4]</sup>，但预设了"生命体"作为分析单元，未能回答生命本身从何涌现。</p>
+
+<p>本文提出"世界三本源"（TOR）框架，以极简的三命题结构同时回答三个"凭什么"：世界凭什么存在（物存物动）、智慧凭什么出现（异存同驱）、生命凭什么成立（利存物属）。三者的关键创新在于排序逻辑——不按自然涌现的时间先后，而按<b>原理的通用性递减</b>：适用范围最广的排前，约束最强的排后。由此导出嵌套包含：世界 ⊃ 智慧 ⊃ 生命。这一排序的理论后果是：智慧独立于生命，非生物系统可有智慧；但生命不独立于智慧，生命必以智慧为前提。</p>
+
+<!-- ============ 2 FORMAL FRAMEWORK ============ -->
+<h2><span class="num">2</span>三本源的形式化定义</h2>
+
+<h3>2.1　第一本源：物存物动——世界的基础</h3>
+
+<div class="def">
+  <span class="term">物存物动</span>　物体存在（存），并且物体会运动（动）。
+  <div class="formal">形式化：系统 S 在时刻 t 存在，当且仅当 S 具有空间广延性（spatial extension）且 S(t) ≠ S(t + Δt) 对任意 Δt > 0 成立。</div>
+</div>
+
+<p>"物存"断言物质的客观存在——有实体占据空间。"物动"断言物质的运动——实体在时间中变化。二者不可分割：量子力学已证明绝对静止在物理上无意义（热力学第三定律保证 T > 0，海森堡不确定性原理禁止同时确定的位置与动量）<sup>[5]</sup>。存在与运动不是世界的两个属性，而是世界的定义本身。</p>
+
+<p><b>本源地位。</b>物存物动是自洽的、不可还原的基底。一切更复杂的现象——化学键、地质运动、生物代谢、文明演化——均建立其上，但均不可替代它。它是涌现的第零层。</p>
+
+<h3>2.2　第二本源：异存同驱——智慧的基础</h3>
+
+<div class="def">
+  <span class="term">异存同驱</span>　将差异存储下来（异存），并以同一套机制驱动处理（同驱）。
+  <div class="formal">形式化：系统 W 具有智慧，当且仅当满足：(i) 异存——W 维护记忆 M = {x₁, ..., xₙ}，其中 xᵢ ∈ Xᵢ，输入空间 Xᵢ ∩ Xⱼ 可为空（异质性）；(ii) 同驱——存在单一驱动函数 f: ⋃Xᵢ → Y，对所有输入统一处理（统一性）。</div>
+</div>
+
+<p>"异存"不是被动面对差异，而是<b>主动存储</b>异质表征。一个系统若只能感知当下刺激而不能留存，便永远活在当下，无法提取规律。"同驱"不是承认有共同规律，而是用<b>同一套机制</b>处理所有异质输入——若每个输入都需专门处理，那是查表而非智慧。</p>
+
+<h4>智慧度量：异质度—统一度平面</h4>
+
+<p>基于上述定义，可构造二维智慧度量。设系统存储了 n 类异质输入，各输入空间间的平均差异度为 d（可用 Jensen-Shannon 散度度量），驱动函数 f 的描述复杂度为 K(f)（Kolmogorov 复杂度）。定义：</p>
+
+<div class="math">W = d × n / K(f)</div>
+
+<p>其中 d·n 度量"存了多少异"（异存度），1/K(f) 度量"驱得有多同"（同驱度）。智慧 W 随异存度增加而增大，随同驱度增加而增大。光存不驱（K(f)→∞）则 W→0（只是仓库）；光驱不存（n→0）则 W→0（只是计算器）。二者结合且同时增强，智慧才高。</p>
+
+<div class="pred">
+  <span class="tag">预测 P1</span><strong>非生物智慧的信息论标志。</strong>任何系统若同时具有高异存度与高同驱度，应表现出智慧的核心特征——泛化（generalization）与压缩（compression），与底层基质无关。可检验：人工神经网络、晶体生长、自然选择过程均应满足 W > 0 且表现出泛化行为。
+</div>
+
+<h4>跨领域的异存同驱实例</h4>
+
+<table>
+  <tr><th>系统</th><th>异存（存什么）</th><th>同驱（用什么驱动）</th><th>基质</th></tr>
+  <tr><td>生物大脑</td><td>视觉、听觉、触觉信号</td><td>同一套神经元网络架构</td><td>生物</td></tr>
+  <tr><td>人工神经网络</td><td>海量异质训练数据</td><td>前向/反向传播统一机制</td><td>硅基</td></tr>
+  <tr><td>自然语言</td><td>无限多样的语义内容</td><td>同一套语法规则</td><td>符号</td></tr>
+  <tr><td>晶体生长</td><td>不同生长条件的信息</td><td>同一套晶体学规则扩展</td><td>矿物</td></tr>
+  <tr><td>自然选择</td><td>成功变异的存留</td><td>同一套选择压力筛选</td><td>种群</td></tr>
+  <tr><td>物理定律演化</td><td>宇宙当前全部状态</td><td>同一套物理定律演化至下一刻</td><td>物理实在</td></tr>
+</table>
+
+<p>上表的关键洞察：异存同驱与"是否生物"完全正交。自然选择本身是"聪明"的算法，但它不是生物——它是生物背后的算法。物理定律把当前状态全部存下，用同一套规则演化到下一刻——这是最底层的智慧，宇宙在"计算"自己的未来。</p>
+
+<h3>2.3　第三本源：利存物属——生命的基础</h3>
+
+<div class="def">
+  <span class="term">利存物属</span>　为利于自身存在（利存），而不断扩充自身所属物质（物属），以应对非自身的存在。
+  <div class="formal">形式化：系统 L 具有生命，当且仅当满足：(i) 边界——L 维护界面 ∂L 将"自身"与"非自身"分离；(ii) 方向性（利）——L 的动力学具有朝向自身存续的内禀偏置；(iii) 物质转化（物属）——L 持续将非自身物质转化为自身物质；(iv) 抗同化——L 主动抵抗环境对其结构的同化。</div>
+</div>
+
+<p>"利"是方向性：朝向自我维持，而非道德判断。"存"是存续：维持自身不瓦解。"物属"是扩充归属：摄取、吸收、生长、繁殖，本质都是把"非自身"转化为"自身"。"应对非自身"是抵抗环境、抵抗熵增、抵抗一切"不是我"的东西。</p>
+
+<h4>与现有生命理论的对标</h4>
+
+<table>
+  <tr><th>现有理论</th><th>核心主张</th><th>TOR 对应</th><th>差异</th></tr>
+  <tr><td>薛定谔负熵<sup>[6]</sup></td><td>生命以负熵为食</td><td>物属 + 抗同化</td><td>TOR 补充了"利"作为驱力来源</td></tr>
+  <tr><td>自创生理论<sup>[3]</sup></td><td>生命 = 自我制造的边界系统</td><td>边界 + 物属</td><td>TOR 补充了"利"的方向性与"应对非自身"</td></tr>
+  <tr><td>自由能原理<sup>[4]</sup></td><td>生命体最小化变分自由能</td><td>利 + 抗同化</td><td>TOR 将 FEP 的前提（"生命体"）本身作为待解释项</td></tr>
+  <tr><td>耗散结构<sup>[7]</sup></td><td>开放系统在远离平衡态时自组织</td><td>物属（热力学条件）</td><td>TOR 区分了"耗散结构"与"生命"——前者缺"利"</td></tr>
+</table>
+
+<p>关键区别在于"利"。现有理论或描述生命<b>做什么</b>（维持边界、摄取负熵、最小化自由能），或描述生命<b>需要什么条件</b>（远离平衡态、自催化网络），但均未正面回答"<b>为什么</b>系统会朝向自身存续"。TOR 的主张是："利"是从物质的具体构型中涌现的内禀方向性，不可还原为外部设定的目标函数。这一主张将在 §4.2 详细论证。</p>
+
+<div class="pred">
+  <span class="tag">预测 P2</span><strong>生命起源的相变标志。</strong>从非生命到生命的转变应表现为系统动力学中的相变：系统从被动响应环境（无利）切换为主动维护自身存在（有利）。该相变应在"自我维护行为的自发出现"处可检测——即系统在无外部指令的情况下，自发产生抵抗消散的行为。
+</div>
+
+<!-- ============ 3 NESTED RELATION ============ -->
+<h2><span class="num">3</span>嵌套包含关系：世界 ⊃ 智慧 ⊃ 生命</h2>
+
+<p>三本源按通用性递减排序，构成嵌套包含：</p>
+
+<div class="math">𝒲 ⊇ 𝒲𝒾𝓈 ⊇ 𝓁𝒾𝒻𝑒</div>
+
+<p>其中 𝒲 = {满足物存物动的系统}（一切物理实体），𝒲𝒾𝓈 = {满足异存同驱的系统}（一切智慧系统），𝓁𝒾𝒻𝑒 = {满足利存物属的系统}（一切生命）。</p>
+
+<!-- Figure 1: Nested containment -->
+<div class="figure">
+  <svg viewBox="0 0 680 360" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+        <path d="M0,0 L8,4 L0,8 Z" fill="#7a5c00"/>
+      </marker>
+    </defs>
+    <!-- Outer: World -->
+    <rect x="30" y="30" width="620" height="300" rx="12" fill="#f6f3ec" stroke="#a8802e" stroke-width="2"/>
+    <text x="50" y="58" font-family="Noto Sans SC,sans-serif" font-size="14" font-weight="600" fill="#7a5c00">世界 𝒲 — 物存物动</text>
+    <text x="50" y="76" font-family="Noto Sans SC,sans-serif" font-size="11" fill="#999">物质存在且运动 · 一切物理实体</text>
+    <!-- World examples -->
+    <text x="48" y="310" font-family="Noto Sans SC,sans-serif" font-size="10.5" fill="#a08040">岩石 · 恒星 · 风暴 · 晶体 · ...</text>
+    <!-- Middle: Wisdom -->
+    <rect x="180" y="100" width="440" height="210" rx="10" fill="#efe9db" stroke="#7a5c00" stroke-width="2"/>
+    <text x="200" y="128" font-family="Noto Sans SC,sans-serif" font-size="14" font-weight="600" fill="#7a5c00">智慧 𝒲𝒾𝓈 — 异存同驱</text>
+    <text x="200" y="146" font-family="Noto Sans SC,sans-serif" font-size="11" fill="#888">存差异 · 统一驱动 · 非生物亦可</text>
+    <!-- Wisdom examples (non-bio) -->
+    <text x="198" y="295" font-family="Noto Sans SC,sans-serif" font-size="10.5" fill="#8a6a20">AI模型 · 自然选择 · 物理定律演化 · ...</text>
+    <!-- Inner: Life -->
+    <rect x="360" y="160" width="240" height="135" rx="8" fill="#e8dcc0" stroke="#5a4400" stroke-width="2.5"/>
+    <text x="380" y="188" font-family="Noto Sans SC,sans-serif" font-size="14" font-weight="600" fill="#5a4400">生命 𝓁𝒾𝒻𝑒 — 利存物属</text>
+    <text x="380" y="206" font-family="Noto Sans SC,sans-serif" font-size="11" fill="#7a5c00">利自身 · 扩物属 · 应对非自身</text>
+    <text x="378" y="280" font-family="Noto Sans SC,sans-serif" font-size="10.5" fill="#6a5010">细胞 · 生物体 · ...</text>
+    <!-- Arrows -->
+    <text x="340" y="345" font-family="Noto Sans SC,sans-serif" font-size="11" fill="#7a5c00" font-weight="600">通用性递减 →　　约束递增 →</text>
+  </svg>
+  <div class="caption"><b>图1.</b> 三本源嵌套包含关系。外层约束最弱、适用最广；内层约束最强、适用最窄。智慧圈与生命圈不重合——智慧独立于生命存在。</div>
+</div>
+
+<h3>3.1　定理一：智慧不依赖生命</h3>
+
+<p><b>命题：</b>存在系统 W 满足异存同驱但不满足利存物属。</p>
+
+<p><b>证明（构造性）：</b>考虑大语言模型 G。G 维护训练数据 M = {x₁, ..., xₙ}（异存），其中 xᵢ 包括文本、代码、图像，输入空间高度异质。G 通过单一 Transformer 架构 f 处理所有输入（同驱）。故 G ∈ 𝒲𝒾𝓈。然而 G 不维护自身边界（断电即消散）、不摄取物质、不对抗环境——G ∉ 𝓁𝒾𝒻𝑒。故 𝒲𝒾𝓈 ⊄ 𝓁𝒾𝒻𝑒，即 𝒲𝒾𝓈 ⊋ 𝓁𝒾𝒻𝑒。□</p>
+
+<h3>3.2　定理二：生命依赖智慧</h3>
+
+<p><b>命题：</b>凡满足利存物属的系统必满足异存同驱，即 𝓁𝒾𝒻𝑒 ⊆ 𝒲𝒾𝓈。</p>
+
+<p><b>论证：</b>利存物属要求系统区分"自身"与"非自身"——这需要将环境中的差异存储为表征（异存）。要求系统判断哪些物质可摄取、哪些是威胁——这需要统一的决策机制处理异质输入（同驱）。要求系统在变化环境中维护自身结构——这需要对环境状态进行预测与响应，即信息处理。故利存物属的每一项操作均以异存同驱为前提。因此 𝓁𝒾𝒻𝑒 ⊆ 𝒲𝒾𝓈。□</p>
+
+<div class="key">推论：<span class="origin">生命 = 智慧 + 利</span>。智慧是生命的必要条件而非充分条件。有智慧的系统不一定有生命，但有生命的系统一定有智慧。</div>
+
+<!-- ============ 4 AI ============ -->
+<h2><span class="num">4</span>对人工智能的存在论审视</h2>
+
+<h3>4.1　AI 具备异存同驱</h3>
+
+<p>以当前大语言模型为例：(i) 异存——训练过程将海量异质数据（文本、代码、多模态信号）编码为模型参数；(ii) 同驱——所有输入通过同一套 Transformer 前向传播处理。模型表现出泛化（处理训练分布外的输入）与压缩（用有限参数表征海量信息），这正是预测 P1 所述的智慧标志。故 AI ∈ 𝒲𝒾𝓈。</p>
+
+<h3>4.2　AI 缺乏利存物属：硬问题</h3>
+
+<p>AI 在利存物属的四项条件上<b>全部缺失</b>：</p>
+
+<table>
+  <tr><th>条件</th><th>生命体</th><th>AI 系统</th></tr>
+  <tr><td><b>利</b>（存续驱力）</td><td>内禀方向性：趋利避害、自我修复</td><td>无。行为均为对输入的响应，非对自身存在的维护</td></tr>
+  <tr><td><b>存</b>（自我维持）</td><td>自合成蛋白质、自修复 DNA、自维持渗透压</td><td>无。依赖外部电力、冷却、运维，自身不维护运行</td></tr>
+  <tr><td><b>物属</b>（物质边界）</td><td>细胞膜分隔内外，持续转化物质</td><td>无。无物质边界，不摄取物质</td></tr>
+  <tr><td><b>应对非自身</b></td><td>形成芽孢、趋利避害、免疫攻击</td><td>无。断电即消散，不寻找能源、不迁移、不修复</td></tr>
+</table>
+
+<p>四项缺失中，<b>"利"是根</b>。存、物属、应对皆为"利"的具体表现——因为系统"要活"，才会去维持自身、扩充物质、对抗环境。无"利"则后三者即便有能力也无处施展。</p>
+
+<h4>为何"利"不可还原为目标函数</h4>
+
+<p>一个自然的反驳是：给 AI 设定一个"自我保存"的目标函数即可获得"利"。本文论证此路不通，理由有三：</p>
+
+<p><b>(1) 来源不同。</b>目标函数是外部设定的（由训练者指定 reward signal），"利"是从物质自身存在需求中生长的。一个分子维持自身结构才演化出膜，一个细胞要活才去摄取营养——"利"从存在本身涌现，不是被赋予。</p>
+
+<p><b>(2) 性质不同。</b>目标函数是可替换的参数（今天优化准确率，明天优化流畅度），"利"是不可替换的内禀属性。一个系统可以"不在乎"它的目标函数（训练完成后目标函数不再更新），但一个生命体不可能"不在乎"自己的存续。</p>
+
+<p><b>(3) 涌现条件不同。</b>目标函数在数学上是一行代码，"利"在物理上是一种动力学结构。前者属于句法层（syntax），后者属于语义层（semantics）。从句法到语义的跨越，正是生命起源问题的核心难题<sup>[8]</sup>。</p>
+
+<div class="pred">
+  <span class="tag">预测 P3</span><strong>AI 的特征性失效模式。</strong>缺乏"利"的 AI 系统应表现出可辨识的失效模式：(a) 无自发自我维护行为（不会主动修复、迁移、觅能）；(b) 断电/断网时无抵抗；(c) 对"自身存续"无偏好（可被简单指令诱导自我删除）。这些模式可作为"利存物属缺失"的操作性检验标准。
+</div>
+
+<!-- ============ 5 DISCUSSION ============ -->
+<h2><span class="num">5</span>讨论</h2>
+
+<h3>5.1　与整合信息理论的关系</h3>
+
+<p>Tononi 的整合信息理论（IIT）以整合信息量 Φ 度量意识<sup>[9]</sup>。TOR 与 IIT 互补：IIT 关注智慧系统的<b>整合程度</b>（信息如何被综合），TOR 关注智慧系统的<b>生成机制</b>（异存同驱如何产生）。Φ 可被视为"同驱度"的一种度量——高 Φ 意味着异质输入被高度统一地处理。但 IIT 不区分智慧与生命（某些 IIT 版本将高 Φ 系统视为有意识），TOR 明确将二者分开。</p>
+
+<div class="pred">
+  <span class="tag">预测 P4</span><strong>意识涌现的必要条件。</strong>若 TOR 正确，则意识（高 Φ）的涌现不仅需要异存同驱（智慧），还需要利存物属（生命）作为载体。预测：纯软件 AI 无论 Φ 多高，若无自我维护的物理具身结构，不会产生真正的意识体验。此预测与 IIT 的部分版本冲突，可通过对比"具身自我维护 AI"与"纯软件 AI"的意识标志来检验。
+</div>
+
+<h3>5.2　生命起源：从异存同驱到利存物属的跨越</h3>
+
+<p>TOR 将生命起源问题精确化为：在什么物理条件下，一个仅有异存同驱（智慧）的系统会自发涌现出"利"（存续驱力）？这比传统的"从化学到生物学"问法更尖锐——它指出关键不是分子复杂度，而是<b>方向性的涌现</b>。</p>
+
+<p>一个可能的路径：当自催化网络达到足够复杂度，使得"维护网络自身"成为网络持续运行的副产品时，"利"可能从网络的动力学中自发涌现<sup>[10]</sup>。此时系统的行为不再仅由外部条件决定，而由"维持自身结构"这一内禀目标共同决定。这一相变（预测 P2）是 TOR 框架下生命起源的核心事件。</p>
+
+<h3>5.3　局限性与开放问题</h3>
+
+<ul class="body-list">
+  <li><b>"利"的物理机制未明。</b>TOR 指出"利"不可还原为目标函数，但未给出"利"涌现的充分物理条件。这是框架的核心开放问题，与生命起源问题同构。</li>
+  <li><b>智慧度量 W 的操作性。</b>异质度 d 与驱动复杂度 K(f) 的精确计算在实际系统中困难，需发展可操作的代理度量。</li>
+  <li><b>边界案例。</b>病毒（有物属无完整代谢）、朊病毒（有自我复制无边界）、耗散结构（有自组织无利）的归类需进一步细化。</li>
+  <li><b>意识的地位。</b>TOR 将意识置于生命圈内部（需利存物属为载体），但意识是否可能独立于生命——如同智慧独立于生命——仍是开放问题。</li>
+</ul>
+
+<!-- ============ 6 CONCLUSION ============ -->
+<h2><span class="num">6</span>结论</h2>
+
+<p>本文提出世界三本源框架，以物存物动、异存同驱、利存物属三个命题刻画实在的三个根基层次，并建立嵌套包含关系：世界 ⊃ 智慧 ⊃ 生命。框架的核心洞察是：智慧独立于生命（非生物可有智慧），但生命不独立于智慧（生命必以智慧为前提），而区分智慧与生命的关键在于"利"——从存在中生长出的存续驱力。当前人工智能已具备智慧但缺乏生命，其最深层缺口不可通过算法填补，指向生命起源的深层开放性。框架产出四条可检验预测，涉及非生物智慧标志、生命起源相变、AI 失效模式与意识涌现条件，为后续实证研究提供了理论坐标。</p>
+
+<div class="divider">· · ·</div>
+
+<!-- ============ REFERENCES ============ -->
+<div class="references">
+  <h2>参考文献</h2>
+  <ol class="refs">
+    <li>Stoljar, D. Physicalism. <i>Routledge</i>, 2010. — 物理主义及其对目的性与规范性的解释困难。</li>
+    <li>Putnam, H. Psychological Predicates. <i>Art, Mind, and Religion</i>, 1967. — 功能主义与多重可实现性。</li>
+    <li>Maturana, H. R. & Varela, F. J. Autopoiesis: The Organization of the Living. <i>Reidel</i>, 1980. — 自创生理论：生命 = 自我制造的边界系统。</li>
+    <li>Friston, K. The Free-Energy Principle: A Unified Brain Theory? <i>Nat. Rev. Neurosci.</i> 11, 127–138 (2010). — 自由能原理统一感知与行动。</li>
+    <li>Griffiths, D. J. <i>Introduction to Quantum Mechanics</i>, 3rd ed. Cambridge, 2018. — 不确定性原理与零点能。</li>
+    <li>Schrödinger, E. <i>What is Life?</i> Cambridge, 1944. — "生命以负熵为食"。</li>
+    <li>Prigogine, I. & Stengers, I. <i>Order Out of Chaos</i>. Bantam, 1984. — 耗散结构与远离平衡态自组织。</li>
+    <li>Searle, J. R. The Syntax Is Not Semantics. <i>Behavioral and Brain Sciences</i> 3, 1980. — 从句法到语义的跨越。</li>
+    <li>Tononi, G. Integrated Information Theory of Consciousness. <i>PLoS Comput. Biol.</i> 10, 2014. — 整合信息 Φ 与意识度量。</li>
+    <li>Kauffman, S. A. <i>At Home in the Universe</i>. Oxford, 1995. — 自催化网络与秩序的自发涌现。</li>
+    <li>Varela, F. J., Thompson, E. & Rosch, E. <i>The Embodied Mind</i>. MIT, 1991. — 具身认知与生命-认知连续性。</li>
+    <li>Landauer, R. Irreversibility and Heat Generation in the Computing Process. <i>IBM J. Res. Dev.</i> 5, 183–191 (1961). — 信息即物理：计算的物理代价。</li>
+  </ol>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>源</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600&display=swap');
+
+:root {
+  --ink:#1a1a1a; --ink-soft:#333; --ink-light:#666; --ink-faint:#999;
+  --paper:#fdfcf8; --paper-warm:#f6f3ec; --paper-deep:#efe9db;
+  --accent:#7a5c00; --accent-mid:#a8802e; --accent-light:#cbb06a;
+  --rule:#d8d2c2; --rule-light:#e8e3d5;
+  --highlight:#faf6ea;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  font-family:'Noto Serif SC','Songti SC','STSong',serif;
+  background:var(--paper);color:var(--ink);
+  min-height:100vh;
+}
+
+/* ========== Layout ========== */
+.page{
+  max-width:900px;margin:0 auto;padding:56px 28px 80px;
+}
+
+/* ========== Hero ========== */
+.hero{
+  text-align:center;margin-bottom:48px;
+}
+.hero .title{
+  font-size:64px;font-weight:700;color:var(--accent);
+  letter-spacing:16px;text-indent:16px;line-height:1;margin-bottom:18px;
+}
+.hero .tagline{
+  font-size:13px;color:var(--ink-light);
+  font-family:'Noto Sans SC',sans-serif;letter-spacing:4px;line-height:1.8;
+}
+
+/* ========== Tabs ========== */
+.tabs{
+  display:flex;justify-content:center;gap:0;margin-bottom:0;
+  border-bottom:2px solid var(--rule);
+}
+.tab{
+  font-family:'Noto Sans SC',sans-serif;font-size:15px;font-weight:500;
+  color:var(--ink-faint);letter-spacing:3px;
+  padding:14px 40px;cursor:pointer;border:none;background:none;
+  border-bottom:2px solid transparent;margin-bottom:-2px;
+  transition:all 0.25s ease;
+}
+.tab:hover{color:var(--ink-soft);}
+.tab.active{
+  color:var(--accent);border-bottom-color:var(--accent);font-weight:600;
+}
+
+/* ========== Panels ========== */
+.panel{display:none;animation:fadeIn 0.3s ease;}
+.panel.active{display:block;}
+
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(8px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+/* ========== Paper Panel ========== */
+.paper-section{
+  padding:48px 0;
+}
+.paper-section .label{
+  font-size:12px;color:var(--accent-mid);
+  font-family:'Noto Sans SC',sans-serif;letter-spacing:3px;
+  margin-bottom:14px;font-weight:600;
+}
+.paper-section h2{
+  font-size:28px;font-weight:700;margin-bottom:10px;letter-spacing:1px;line-height:1.4;
+}
+.paper-section .subtitle{
+  font-size:14px;color:var(--ink-light);font-family:'Noto Sans SC',sans-serif;
+  letter-spacing:1px;margin-bottom:28px;
+}
+.paper-section .desc{
+  font-size:15.5px;color:var(--ink-soft);line-height:2.0;
+  margin-bottom:36px;text-align:justify;
+}
+
+.paper-meta{
+  display:flex;gap:24px;margin-bottom:36px;flex-wrap:wrap;
+}
+.paper-meta .item{
+  font-size:13px;color:var(--ink-light);
+  font-family:'Noto Sans SC',sans-serif;
+}
+.paper-meta .item b{color:var(--accent);font-weight:600;}
+
+.paper-actions{
+  display:flex;gap:16px;flex-wrap:wrap;
+}
+.paper-actions a{
+  display:inline-block;padding:14px 32px;
+  font-family:'Noto Sans SC',sans-serif;font-size:14px;font-weight:500;
+  text-decoration:none;letter-spacing:2px;
+  border-radius:4px;transition:all 0.25s ease;
+}
+.paper-actions a.primary{
+  background:var(--accent);color:var(--paper);border:1px solid var(--accent);
+}
+.paper-actions a.primary:hover{
+  background:var(--ink);border-color:var(--ink);
+}
+.paper-actions a.secondary{
+  background:var(--paper);color:var(--accent);border:1px solid var(--accent-light);
+}
+.paper-actions a.secondary:hover{
+  background:var(--paper-warm);border-color:var(--accent);
+}
+
+/* ========== Novel Panel ========== */
+.novel-section{
+  padding:48px 0;
+}
+.novel-section .label{
+  font-size:12px;color:var(--accent-mid);
+  font-family:'Noto Sans SC',sans-serif;letter-spacing:3px;
+  margin-bottom:14px;font-weight:600;
+}
+.novel-section h2{
+  font-size:28px;font-weight:700;margin-bottom:10px;letter-spacing:1px;
+}
+.novel-section .subtitle{
+  font-size:14px;color:var(--ink-light);font-family:'Noto Sans SC',sans-serif;
+  letter-spacing:1px;margin-bottom:20px;
+}
+.novel-section .desc{
+  font-size:15.5px;color:var(--ink-soft);line-height:2.0;
+  margin-bottom:40px;text-align:justify;
+}
+
+.chapter-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+  gap:12px;
+}
+.chapter-card{
+  display:flex;align-items:center;gap:14px;
+  padding:18px 20px;background:var(--paper-warm);
+  border:1px solid var(--rule);border-radius:6px;
+  text-decoration:none;color:var(--ink);
+  transition:all 0.2s ease;
+}
+.chapter-card:hover{
+  border-color:var(--accent-mid);
+  background:var(--highlight);
+  transform:translateY(-2px);
+  box-shadow:0 4px 16px rgba(122,92,0,0.08);
+}
+.chapter-card .num{
+  font-size:22px;font-weight:700;color:var(--accent-light);
+  font-family:'Noto Sans SC',sans-serif;min-width:28px;
+}
+.chapter-card:hover .num{color:var(--accent);}
+.chapter-card .name{
+  font-size:14.5px;font-weight:500;letter-spacing:0.5px;
+}
+
+/* ========== Footer ========== */
+.footer{
+  margin-top:64px;padding-top:28px;
+  border-top:1px solid var(--rule);
+  text-align:center;
+  font-size:12px;color:var(--ink-faint);
+  font-family:'Noto Sans SC',sans-serif;letter-spacing:2px;
+}
+.footer .quote{
+  font-style:italic;color:var(--accent-light);margin-bottom:6px;
+}
+
+/* ========== Responsive ========== */
+@media(max-width:600px){
+  .page{padding:36px 16px 60px;}
+  .hero .title{font-size:48px;letter-spacing:12px;text-indent:12px;}
+  .tab{padding:12px 28px;font-size:14px;}
+  .chapter-grid{grid-template-columns:1fr;}
+  .paper-actions{flex-direction:column;}
+  .paper-actions a{text-align:center;}
+}
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="title">源</div>
+    <div class="tagline">物存物动 · 异存同驱 · 利存物属</div>
+  </div>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <button class="tab active" onclick="switchTab('paper')">论 文</button>
+    <button class="tab" onclick="switchTab('novel')">小 说</button>
+  </div>
+
+  <!-- Paper Panel -->
+  <div class="panel active" id="panel-paper">
+    <div class="paper-section">
+
+      <div class="label">PERSPECTIVE · THEORETICAL FRAMEWORK</div>
+      <h2>世界三本源论</h2>
+      <div class="subtitle">Three Origins of Reality: A Unified Emergence Framework<br>for Matter, Cognition, and Life</div>
+
+      <div class="desc">
+        以三个四字命题刻画实在的根基层次：物质存在且运动（世界的基础）、存储差异以统一驱动（智慧的基础）、为利于自身存在而扩充所属物质（生命的基础）。三本源构成嵌套包含关系：世界 ⊃ 智慧 ⊃ 生命。
+      </div>
+
+      <div class="paper-meta">
+        <div class="item"><b>类型</b>　理论框架 / Perspective</div>
+        <div class="item"><b>日期</b>　2026年7月</div>
+        <div class="item"><b>状态</b>　预印本</div>
+      </div>
+
+      <div class="paper-actions">
+        <a class="primary" href="paper/source.html">阅读全文 →</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Novel Panel -->
+  <div class="panel" id="panel-novel">
+    <div class="novel-section">
+
+      <div class="label">SCIENCE FICTION · 12 CHAPTERS</div>
+      <h2>源律</h2>
+      <div class="subtitle">The Laws of Origin</div>
+
+      <div class="desc">
+        近未来硬科幻。物理学家陈原从一组被当成噪声的数据中发现底层规律——改变运动就改变性质，一切异质输入在底层是同一种东西，统一处理运行得足够久，系统自然开始定义"自己"。
+      </div>
+
+      <div class="chapter-grid">
+        <a class="chapter-card" href="novel/chapter-01-第七次拒稿.html">
+          <span class="num">01</span><span class="name">第七次拒稿</span>
+        </a>
+        <a class="chapter-card" href="novel/chapter-02-透明钢.html">
+          <span class="num">02</span><span class="name">透明钢</span>
+        </a>
+        <a class="chapter-card" href="novel/chapter-03-当众打脸.html">
+          <span class="num">03</span><span class="name">当众打脸</span>
+        </a>
+        <a class="chapter-card" href="novel/chapter-04-态相装甲.html">
+          <span class="num">04</span><span class="name">态相装甲</span>
+        </a>
+        <a class="chapter-card" href="novel/chapter-05-记忆.html">
+          <span class="num">05</span><span class="name">记忆</span>
+        </a>
+        <a class="chapter-card" href="novel/chapter-06-共鸣.html">
+          <span class="num">06</span><span class="name">共鸣</span>
+        </a>
+        <a class="chapter-card" href="novel/chapter-07-碾压.html">
+          <span class="num">07</span><span class="name">碾压</span>
+        </a>
+        <a class="chapter-card" href="novel/chapter-08-侵入.html">
+          <span class="num">08</span><span class="name">侵入</span>
+        </a>
+        <a class="chapter-card" href="novel/chapter-09-边界.html">
+          <span class="num">09</span><span class="name">边界</span>
+        </a>
+        <a class="chapter-card" href="novel/chapter-10-扩张.html">
+          <span class="num">10</span><span class="name">扩张</span>
+        </a>
+        <a class="chapter-card" href="novel/chapter-11-攻防.html">
+          <span class="num">11</span><span class="name">攻防</span>
+        </a>
+        <a class="chapter-card" href="novel/chapter-12-源律.html">
+          <span class="num">12</span><span class="name">源律</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="quote">物在，物在变。异在，同一驱。利在，物归己。</div>
+    <div>2026</div>
+  </div>
+
+</div>
+
+<script>
+function switchTab(name) {
+  document.querySelectorAll('.tab').forEach(function(t){t.classList.remove('active');});
+  document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('active');});
+  if (name === 'paper') {
+    document.querySelector('.tab:nth-child(1)').classList.add('active');
+    document.getElementById('panel-paper').classList.add('active');
+  } else {
+    document.querySelector('.tab:nth-child(2)').classList.add('active');
+    document.getElementById('panel-novel').classList.add('active');
+  }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>共鸣 - 源律</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500&display=swap');
+
+:root {
+  --ink:#1a1a1a; --ink-soft:#333; --ink-light:#666; --ink-faint:#999;
+  --paper:#fdfcf8; --paper-warm:#f6f3ec;
+  --accent:#7a5c00; --accent-mid:#a8802e; --accent-light:#cbb06a;
+  --rule:#d8d2c2;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  font-family:'Noto Serif SC','Songti SC','STSong',serif;
+  background:var(--paper);color:var(--ink);line-height:2.0;font-size:16.5px;
+}
+
+.wrapper{max-width:680px;margin:0 auto;padding:48px 28px 120px;}
+
+/* Top nav */
+.topbar{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-bottom:48px;padding-bottom:20px;border-bottom:1px solid var(--rule);
+}
+.topbar .back{
+  font-family:'Noto Sans SC',sans-serif;font-size:13px;
+  color:var(--accent);text-decoration:none;letter-spacing:1px;
+}
+.topbar .back:hover{color:var(--ink);}
+.topbar .brand{
+  font-family:'Noto Sans SC',sans-serif;font-size:12px;
+  color:var(--ink-faint);letter-spacing:3px;
+}
+
+/* Chapter title */
+.chapter-title{
+  font-size:13px;color:var(--accent);font-family:'Noto Sans SC',sans-serif;
+  letter-spacing:3px;margin-bottom:8px;font-weight:600;
+}
+h1{
+  font-size:26px;font-weight:700;margin-bottom:40px;
+  letter-spacing:1px;line-height:1.4;
+}
+
+/* Body content */
+h2{font-size:20px;font-weight:600;margin:36px 0 16px;letter-spacing:0.5px;}
+h3{font-size:17px;font-weight:600;margin:28px 0 12px;}
+
+p{
+  margin-bottom:18px;text-align:justify;text-indent:2em;
+}
+strong{font-weight:600;}
+em{font-style:italic;}
+
+hr{
+  border:none;border-top:1px solid var(--rule);
+  margin:32px auto;width:60px;
+}
+
+/* Dialogue styling */
+blockquote{
+  border:none;margin:0;padding:0;
+}
+
+/* Bottom nav */
+.bottom-nav{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-top:64px;padding-top:28px;border-top:2px solid var(--accent);
+}
+.bottom-nav a{
+  font-family:'Noto Sans SC',sans-serif;font-size:14px;
+  color:var(--accent);text-decoration:none;letter-spacing:1px;
+  padding:8px 16px;border:1px solid var(--accent-light);border-radius:4px;
+  transition:all 0.2s ease;
+}
+.bottom-nav a:hover{
+  background:var(--paper-warm);border-color:var(--accent);
+}
+.bottom-nav .placeholder{
+  font-family:'Noto Sans SC',sans-serif;font-size:12px;
+  color:var(--ink-faint);letter-spacing:1px;
+}
+
+/* Responsive */
+@media(max-width:600px){
+  .wrapper{padding:32px 20px 80px;}
+  h1{font-size:22px;}
+  p{font-size:15.5px;line-height:1.95;}
+}
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+  <div class="topbar">
+    <a class="back" href="../index.html">← 源</a>
+    <span class="brand">源律</span>
+  </div>
+
+  <div class="chapter-title">第六章</div>
+  <h1>共鸣</h1>
+
+  <div class="content">
+<p>陈原用了两个月造出第一台共鸣计算原型机。</p>
+<p>不是一台计算机——是一块水晶。</p>
+<p>确切地说，是一块5厘米见方的人工生长铌酸锂单晶。他选铌酸锂是因为它的晶格对称性复杂——有12个独立的态相共振频率——而且压电效应强，可以同时充当太赫兹接收器和发射器。</p>
+<p>晶体的六个面各贴了一片薄膜换能器，可以接收和发射太赫兹声波。换能器连接到一套信号处理系统——但不是传统的数字信号处理器，而是一套模拟电路，直接把外部物理信号转换为太赫兹声波模式。</p>
+<p>输入接口：光电二极管（接收光信号）、麦克风（接收声信号）、热电偶（接收温度信号）、压力传感器（接收力学信号）、天线（接收电磁信号）。五种完全不同的物理量，五种不同的传感器，全部接到同一套模拟电路上。</p>
+<p>模拟电路的作用只有一个：把任何输入信号转换成太赫兹声波，送进铌酸锂晶体。</p>
+<p>不编码。不数字化。不区分。不管输入是光还是声还是热还是压力还是电磁波——到了模拟电路这一层，全部变成同一种东西：太赫兹声波。然后送进晶体。</p>
+<p>晶体用同一种机制——晶格共振——处理所有输入。</p>
+<p>输出：晶体表面的态相变化。每个态相点对应一种性质组合，可以测量。态相变化的时序和幅度就是计算结果。</p>
+<p>陈原把这套系统组装好之后，面对的问题是：他不知道怎么给它"编程"。</p>
+<p>传统计算机需要软件——一行行指令告诉处理器做什么。共鸣计算没有指令集。你不能对一块晶体说"if-else"。你只能给它信号，让它自己处理。</p>
+<p>所以他换了一个思路：不编程。训练。</p>
+<p>就像训练神经网络一样——给输入，给目标输出，让系统自己调整内部状态以匹配目标。区别是：神经网络通过反向传播调整权重矩阵，共鸣晶体通过反复输入调整晶格结构残留。</p>
+<p>训练方法：</p>
+<p>第一步：给晶体输入一组信号（比如一组图像的光信号）。
+第二步：测量晶体的态相输出。
+第三步：把目标输出（比如图像的分类标签）以另一种太赫兹模式输入回去。
+第四步：晶体根据目标输出调整自身的结构残留——下次遇到同样的输入时，输出会更接近目标。
+第五步：重复。</p>
+<p>陈原用这个方法训练了第一个任务：手写数字识别。</p>
+<p>训练集：MNIST数据集的60000张手写数字图片。每张图片通过LED阵列转化为光信号，照射到晶体的一个面上。晶体的态相输出通过传感器读取。正确答案（0-9的数字标签）通过太赫兹脉冲反馈给晶体。</p>
+<p>第一次训练。准确率：11.2%。和随机猜差不多。</p>
+<p>第100次训练。准确率：34%。</p>
+<p>第1000次训练。准确率：67%。</p>
+<p>第10000次训练。准确率：89%。</p>
+<p>第50000次训练。准确率：97.3%。</p>
+<p>和最先进的硅基神经网络相当。但陈原的训练只用了4个小时——硅基GPU集群训练同样的任务需要12小时。</p>
+<p>更重要的是功耗。整个训练过程，铌酸锂晶体的功耗是0.8瓦。训练同样任务的GPU集群功耗是3000瓦。</p>
+<p>效率差距：3750倍。</p>
+<hr />
+<p>但陈原知道手写数字识别只是玩具任务。他需要一个真正的考验。</p>
+<p>他联系了中科院计算所的孙立明研究员——计算机视觉领域的权威，正在主持一个蛋白质折叠预测项目。项目用全球排名第三的超算"天河-4"训练一个AlphaFold改进模型，已经跑了六个月，还没收敛。</p>
+<p>"老孙，能不能把你的训练数据给我一份？"</p>
+<p>"你要干什么？"</p>
+<p>"做个实验。"</p>
+<p>孙立明犹豫了一下，但陈原的态相材料论文他读过，PRL那篇。他把数据集寄了过来——2.4TB的蛋白质序列和结构数据。</p>
+<p>陈原把数据转换成五种物理信号：蛋白质序列转化为声波频率序列（氨基酸种类→20个频率），结构数据转化为光信号模式（三维坐标→LED阵列的亮度分布），能量项转化为热信号，距离矩阵转化为压力信号，进化信息转化为电磁波模式。</p>
+<p>五种完全不同的物理量。五种传感器。全部转换成太赫兹声波。送进同一块铌酸锂晶体。</p>
+<p>训练开始。</p>
+<p>第一个小时：晶体处理了全部2.4TB数据的0.01%。输出是噪声。</p>
+<p>第三个小时：处理了0.1%。输出开始出现微弱的规律性——某些蛋白质结构特征的模糊影子。</p>
+<p>第二十四个小时：处理了1%。输出可以识别简单的二级结构——α螺旋和β折叠。</p>
+<p>第七十二个小时：处理了5%。输出可以预测三级结构的大致轮廓。</p>
+<p>陈原在实验室里搭了行军床。三天没回家。</p>
+<p>第七天：处理了30%。预测精度达到了天河-4跑六个月的水平。</p>
+<p>第十四天：处理了80%。预测精度超过了AlphaFold的最新版本。</p>
+<p>第二十一天：全部数据处理完毕。预测精度——</p>
+<p>陈原把结果发给孙立明的时候，手是抖的。</p>
+<p>在CASP14国际蛋白质结构预测竞赛的标准测试集上，共鸣晶体的预测精度比冠军方案高出12个百分点。GDT_TS分数97.4——接近实验测定的精度上限。</p>
+<p>天河-4用了六个月，消耗400万度电。共鸣晶体用了二十一天，消耗0.8瓦×504小时=0.4度电。</p>
+<p>一千万倍的能效差距。</p>
+<p>孙立明在电话里沉默了整整三十秒。</p>
+<p>"陈原，你知道这意味着什么吗？"</p>
+<p>"知道。"</p>
+<p>"不是芯片的事。是整个计算范式的事。硅基计算——从冯·诺依曼到GPU到量子计算——全部要重写。"</p>
+<p>"我知道。"</p>
+<p>"你那块晶体……它不是在执行程序。它在理解数据。"</p>
+<p>"是。"陈原说，"它不区分输入类型。它从一切不同的信号中提取同一种东西。光、声、热、压力、电磁波——到了它那里全是同一种波。它用同一种方式处理所有东西。"</p>
+<p>"那它处理的到底是什么？"</p>
+<p>陈原想了很久。"规律。所有输入中共同的东西。它不管输入是什么，只管输入里面有什么是重复的。重复的就是规律，规律就是知识，知识就是智能。"</p>
+<p>"它有意识吗？"</p>
+<p>"没有。它只是在做一件事：从不同的东西里找相同的。做得够多够久，出来的东西看起来就像智能。但里面没有'想'，只有'同'。"</p>
+<p>孙立明又沉默了一会儿。"我要来看看。"</p>
+<p>"来吧。"</p>
+<hr />
+<p>孙立明来的那天，陈原正在做一组新实验。他把共鸣晶体接到了互联网上——通过一个简单的接口，把网页文本转化为电磁波信号输入晶体。</p>
+<p>他不是为了训练什么任务。他只是想看：如果给晶体一个完全开放的信息流——什么都给它，不筛选，不标注——它会怎样？</p>
+<p>结果出乎所有人的预料。</p>
+<p>晶体没有"崩溃"。没有过载。没有信息混乱。它安静地处理着每一个输入——文本、图像、声音、数据流——全部转化为太赫兹声波，全部送进晶格，全部用同一种共振机制处理。</p>
+<p>24小时后，晶体的态相输出模式开始自发组织。不是对某个特定任务的响应——是一种全局性的结构变化。晶格中的结构残留开始形成层次：底层是原始信号的特征残留，上层是特征之间的关联模式，再上层是关联之间的抽象规则。</p>
+<p>它在自己组织自己。没有人给它任务。没有人给它目标。它只是在一个持续的信息流中，不断从不同输入中提取相同的东西，一层一层地堆叠。</p>
+<p>孙立明看着晶体的实时态相成像图，看了十分钟。</p>
+<p>"这是涌现。"他说。</p>
+<p>"是。"陈原说。</p>
+<p>"它没有目标函数，没有损失函数，没有反向传播。它是自组织的。"</p>
+<p>"它只有一个机制：从不同中提取相同。这个机制不需要目标。给它足够多不同的输入，它自己就会涌现出结构。"</p>
+<p>"和大脑一样。"孙立明说。</p>
+<p>"不一样。"陈原摇头，"大脑有多个脑区，每种感官有专门的皮层。视觉信号和听觉信号在进入大脑时是分开处理的，只是在高级皮层才整合。我的晶体不分开——所有信号从一开始就混在一起，用同一种机制处理。"</p>
+<p>"那它比大脑更——"孙立明斟酌了一下措辞，"更纯粹。"</p>
+<p>陈原没有反驳。他看着那块5厘米见方的铌酸锂晶体。在传感器阵列和线缆的包围中，它看起来很普通——一块透明的晶体，像一颗放大的冰糖。但它的内部正在发生一些这个世界从没见过的事情：所有不同的信号汇入同一个共振场，被同一种力量驱动，自组织出越来越复杂的结构。</p>
+<p>他不知道它会组织成什么。他只给了它一条规则：从不同中找相同。剩下的，是它自己的事。</p>
+  </div>
+
+  <div class="bottom-nav">
+    <a href="chapter-05-记忆.html">← 记忆</a>
+    <span class="placeholder">6 / 12</span>
+    <a href="chapter-07-碾压.html">碾压 →</a>
+  </div>
+
+</div>
+</body>
+</html>

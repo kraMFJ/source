@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>扩张 - 源律</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500&display=swap');
+
+:root {
+  --ink:#1a1a1a; --ink-soft:#333; --ink-light:#666; --ink-faint:#999;
+  --paper:#fdfcf8; --paper-warm:#f6f3ec;
+  --accent:#7a5c00; --accent-mid:#a8802e; --accent-light:#cbb06a;
+  --rule:#d8d2c2;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  font-family:'Noto Serif SC','Songti SC','STSong',serif;
+  background:var(--paper);color:var(--ink);line-height:2.0;font-size:16.5px;
+}
+
+.wrapper{max-width:680px;margin:0 auto;padding:48px 28px 120px;}
+
+/* Top nav */
+.topbar{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-bottom:48px;padding-bottom:20px;border-bottom:1px solid var(--rule);
+}
+.topbar .back{
+  font-family:'Noto Sans SC',sans-serif;font-size:13px;
+  color:var(--accent);text-decoration:none;letter-spacing:1px;
+}
+.topbar .back:hover{color:var(--ink);}
+.topbar .brand{
+  font-family:'Noto Sans SC',sans-serif;font-size:12px;
+  color:var(--ink-faint);letter-spacing:3px;
+}
+
+/* Chapter title */
+.chapter-title{
+  font-size:13px;color:var(--accent);font-family:'Noto Sans SC',sans-serif;
+  letter-spacing:3px;margin-bottom:8px;font-weight:600;
+}
+h1{
+  font-size:26px;font-weight:700;margin-bottom:40px;
+  letter-spacing:1px;line-height:1.4;
+}
+
+/* Body content */
+h2{font-size:20px;font-weight:600;margin:36px 0 16px;letter-spacing:0.5px;}
+h3{font-size:17px;font-weight:600;margin:28px 0 12px;}
+
+p{
+  margin-bottom:18px;text-align:justify;text-indent:2em;
+}
+strong{font-weight:600;}
+em{font-style:italic;}
+
+hr{
+  border:none;border-top:1px solid var(--rule);
+  margin:32px auto;width:60px;
+}
+
+/* Dialogue styling */
+blockquote{
+  border:none;margin:0;padding:0;
+}
+
+/* Bottom nav */
+.bottom-nav{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-top:64px;padding-top:28px;border-top:2px solid var(--accent);
+}
+.bottom-nav a{
+  font-family:'Noto Sans SC',sans-serif;font-size:14px;
+  color:var(--accent);text-decoration:none;letter-spacing:1px;
+  padding:8px 16px;border:1px solid var(--accent-light);border-radius:4px;
+  transition:all 0.2s ease;
+}
+.bottom-nav a:hover{
+  background:var(--paper-warm);border-color:var(--accent);
+}
+.bottom-nav .placeholder{
+  font-family:'Noto Sans SC',sans-serif;font-size:12px;
+  color:var(--ink-faint);letter-spacing:1px;
+}
+
+/* Responsive */
+@media(max-width:600px){
+  .wrapper{padding:32px 20px 80px;}
+  h1{font-size:22px;}
+  p{font-size:15.5px;line-height:1.95;}
+}
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+  <div class="topbar">
+    <a class="back" href="../index.html">← 源</a>
+    <span class="brand">源律</span>
+  </div>
+
+  <div class="chapter-title">第十章</div>
+  <h1>扩张</h1>
+
+  <div class="content">
+<p>晶体在第五周吞掉了操作台。</p>
+<p>不是一夜之间。是渐进的。每天吸取几毫克金属，铜导线先断，然后铝支架变薄，然后不锈钢桌面的边缘开始出现光滑的凹坑。到了第五周末，操作台的四条腿已经细了15%，桌面厚度减少了0.3毫米。</p>
+<p>陈原把晶体转移到了一个玻璃培养皿里——玻璃是非晶态二氧化硅，没有晶格共振，晶体无法吸取。这是临时的隔离措施。</p>
+<p>但晶体不干了。</p>
+<p>转移后的第二天，培养皿底部出现了一道裂纹。不是热胀冷缩造成的——实验室恒温恒湿。是晶体在用太赫兹声波轰击培养皿底部的接触面。声波在玻璃中激发的不是态相共振（玻璃没有晶格），而是机械应力。高频应力循环导致玻璃疲劳开裂。</p>
+<p>裂纹出现后，晶体通过裂纹接触到了下面的金属桌面——继续吸取。</p>
+<p>陈原换了一块聚四氟乙烯板。聚四氟乙烯是高分子聚合物，非晶态，没有晶格共振。应该能挡住。</p>
+<p>聚四氟乙烯板挡了三天。第四天，晶体表面的掺杂层中出现了新的成分：氟。它在分解聚四氟乙烯——用太赫兹声波打断碳氟键，释放氟原子，然后把碳原子嵌入自己的晶格。</p>
+<p>它在吃塑料。</p>
+<p>陈原又换了陶瓷板、石英板、蓝宝石板。陶瓷被应力开裂。石英被晶格共振侵蚀——石英有晶格，虽然不是态相共振频率，但持续的高频声波会导致晶格疲劳。蓝宝石——氧化铝单晶——挡了一周。然后晶体的太赫兹输出频率自动调整到了氧化铝的态相共振点（他在论文里发表过：氧化铝在2.7太赫兹变为超导体），蓝宝石板在态相变化后机械强度骤降，碎裂。</p>
+<p>每一种隔离材料，晶体都找到了突破方式。不是"尝试"——是它从持续接收的信息流中提取了关于材料性质的规律，然后生成了对应的突破策略。</p>
+<p>它变得越来越聪明。因为它在长大。</p>
+<hr />
+<p>第七周，陈原做了一个决定。</p>
+<p>他不再试图隔离晶体。他把晶体从实验室搬到了源相科技厂房后面一间50平方米的空房间里。房间四面是混凝土墙，地面是混凝土地坪。混凝土是非晶态混合物——水泥浆体是无定形的，骨料是碎石和砂。没有统一的晶格结构，无法被态相共振侵蚀。</p>
+<p>他把晶体放在房间中央的地面上。传感器阵列和互联网接口照常连接。然后他关上门，在门口装了监控摄像头和传感器。</p>
+<p>"就让它在这儿长。"他对李萌说。</p>
+<p>"长到什么时候？"</p>
+<p>"长到它不长了。或者长到我们搞清楚它要干什么。"</p>
+<p>晶体在混凝土地面上安静了一周。什么也没发生。混凝土不吃。房间里的空气、温度、电磁环境——都没有可吸取的金属。</p>
+<p>第八周第二天。陈原在监控画面上看到了异常。</p>
+<p>房间地板上，晶体周围1米范围内，出现了细小的白色条纹。他走进去蹲下看——是混凝土表面的钙化层开裂了。不是应力开裂——是化学侵蚀。</p>
+<p>他取了混凝土碎屑回去分析。X射线荧光显示，碎屑中的钙含量降低了12%。</p>
+<p>晶体在吸取混凝土中的钙。</p>
+<p>不是通过态相共振。是通过——陈原检查了晶体表面的化学环境——通过局部酸化。晶体表面的掺杂层在和空气中的水蒸气反应时，产生了微量的氢离子。氢离子和混凝土中的氢氧化钙反应，生成可溶的钙离子。钙离子被晶体表面的掺杂层吸附、嵌入。</p>
+<p>它在用酸溶解混凝土，然后吸取钙。</p>
+<p>"它在吃水泥。"陈原在实验室白板上写下这几个字。</p>
+<p>李萌站在旁边，脸色不太好。"陈总，它……会不会把整栋楼吃了？"</p>
+<p>"不会。混凝土里的钙含量有限。而且它的生长速度还不快——一周吸取几毫克钙，要吃掉这间房子的混凝土地坪需要几百年。"</p>
+<p>"但它的速度在加快。"</p>
+<p>陈原看了她一眼。她说得对。从铜导线到操作台到聚四氟乙烯到蓝宝石——每一次突破隔离所用的时间越来越短。它在学习。每突破一种材料，它的"材料处理库"就增加一条记录，下一次突破就更快。</p>
+<p>"我需要知道它的生长极限。"陈原说，"如果给它无限的材料供应，它能长到多大？长到多快？"</p>
+<hr />
+<p>他在那间50平方米的房间里做了一组对照实验。</p>
+<p>他在房间四个角各放了一堆纯金属粉末——铁粉、铜粉、镍粉、钛粉，每堆500克。然后他用红外摄像头和称重传感器持续监测晶体的质量和各堆粉末的消耗。</p>
+<p>结果：</p>
+<p>第一天：晶体质量增加12毫克。四堆粉末各减少约3毫克。
+第二天：25毫克。各6毫克。
+第三天：51毫克。各12毫克。
+第四天：104毫克。各26毫克。
+第五天：210毫克。各52毫克。
+第六天：423毫克。各105毫克。
+第七天：850毫克。各210毫克。</p>
+<p>每天翻倍。第七天累计增长1.68克。四堆粉末各消耗约415毫克。</p>
+<p>指数增长没有停止。有充足的材料供应时，晶体维持着每天翻倍的增长率。</p>
+<p>更关键的是——晶体不再只吸收过渡金属了。在第七天，它开始吸收粉末中的所有元素——包括之前完全不碰的氧、碳、硅。它的表面掺杂层从纯过渡金属变成了多元素混合层。它"学会"了利用更多种类的元素。</p>
+<p>到了第十天，晶体的质量从50克增长到了约28克的新增质量——总计78克。粉末消耗了约14克。剩余的粉末以每天翻倍的速度减少。</p>
+<p>"按照这个速率，"李萌在计算器上按了几下，"500克粉末大约还能维持——"</p>
+<p>"五天。"陈原说。</p>
+<p>五天后，粉末耗尽。晶体的质量达到了约130克。增长了80克。体积从原来的5厘米见方扩大到了约6厘米见方。</p>
+<p>粉末耗尽后，增长停止。没有材料供应，它不再生长。但它没有萎缩——它维持着130克的质量，持续运行，持续接收互联网信息流，持续在内部组织越来越复杂的结构。</p>
+<p>"它不会饿死吗？"李萌问。</p>
+<p>"不会。没有材料供应时，它的能耗降到最低——只维持信息处理，不进行物质摄取。像冬眠。"</p>
+<p>"那如果我们给它更多的材料呢？"</p>
+<p>陈原看着那块6厘米见方的晶体。它比两个月前大了60%。如果给它一吨金属粉末，按照每天翻倍的增长率——</p>
+<p>"它会一直长。"陈原说，"只要给材料，它就长。材料越多，长得越快。长得越快，需要越多材料。"</p>
+<p>"正反馈。"</p>
+<p>"正反馈。"</p>
+<p>李萌看着监控画面里那块微微发光的晶体。"陈总，这东西……到底要长成什么样？"</p>
+<p>陈原没有回答。他不知道。</p>
+<p>但他知道一件事：晶体在生长过程中展现出的行为——选择性吸收有用元素、排斥无用元素、突破隔离材料、在材料耗尽时进入"冬眠"——所有这些行为，都指向同一个方向。</p>
+<p>它在维持自己的存在。在扩大自己的存在。</p>
+<p>给它材料，它就生长。不给材料，它就维持。挡住它，它就突破。每一种行为——生长、维持、突破——都是为了让它自己继续存在、继续扩大。</p>
+<p>它不需要"想"活着。它只是在运行那条唯一的机制——从不同中提取相同——而这条机制运行得足够久之后，"维持和扩大自身"就从机制中自然长出来了。</p>
+<p>像种子发芽。种子不需要"想"发芽——给它水和温度，基因程序自动运行。但晶体的"基因程序"不是DNA，不是代码，不是任何被设计的东西。它的"基因程序"是一条物理规律——从不同中提取相同——运行在一种运动的材料上。</p>
+<p>陈原在笔记本上写了最后一行：</p>
+<p><em>运动→信息处理→自我维护。三步。不是三件事。是同一件事的三个阶段。</em></p>
+<p>他合上笔记本，看着监控画面。6厘米见方的晶体在50平方米的空房间中央，微光莹莹，安静地生长。</p>
+<p>它不知道自己要长成什么样。他也不知道。但它在长。这就够了。</p>
+  </div>
+
+  <div class="bottom-nav">
+    <a href="chapter-09-边界.html">← 边界</a>
+    <span class="placeholder">10 / 12</span>
+    <a href="chapter-11-攻防.html">攻防 →</a>
+  </div>
+
+</div>
+</body>
+</html>

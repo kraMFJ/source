@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>态相装甲 - 源律</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500&display=swap');
+
+:root {
+  --ink:#1a1a1a; --ink-soft:#333; --ink-light:#666; --ink-faint:#999;
+  --paper:#fdfcf8; --paper-warm:#f6f3ec;
+  --accent:#7a5c00; --accent-mid:#a8802e; --accent-light:#cbb06a;
+  --rule:#d8d2c2;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  font-family:'Noto Serif SC','Songti SC','STSong',serif;
+  background:var(--paper);color:var(--ink);line-height:2.0;font-size:16.5px;
+}
+
+.wrapper{max-width:680px;margin:0 auto;padding:48px 28px 120px;}
+
+/* Top nav */
+.topbar{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-bottom:48px;padding-bottom:20px;border-bottom:1px solid var(--rule);
+}
+.topbar .back{
+  font-family:'Noto Sans SC',sans-serif;font-size:13px;
+  color:var(--accent);text-decoration:none;letter-spacing:1px;
+}
+.topbar .back:hover{color:var(--ink);}
+.topbar .brand{
+  font-family:'Noto Sans SC',sans-serif;font-size:12px;
+  color:var(--ink-faint);letter-spacing:3px;
+}
+
+/* Chapter title */
+.chapter-title{
+  font-size:13px;color:var(--accent);font-family:'Noto Sans SC',sans-serif;
+  letter-spacing:3px;margin-bottom:8px;font-weight:600;
+}
+h1{
+  font-size:26px;font-weight:700;margin-bottom:40px;
+  letter-spacing:1px;line-height:1.4;
+}
+
+/* Body content */
+h2{font-size:20px;font-weight:600;margin:36px 0 16px;letter-spacing:0.5px;}
+h3{font-size:17px;font-weight:600;margin:28px 0 12px;}
+
+p{
+  margin-bottom:18px;text-align:justify;text-indent:2em;
+}
+strong{font-weight:600;}
+em{font-style:italic;}
+
+hr{
+  border:none;border-top:1px solid var(--rule);
+  margin:32px auto;width:60px;
+}
+
+/* Dialogue styling */
+blockquote{
+  border:none;margin:0;padding:0;
+}
+
+/* Bottom nav */
+.bottom-nav{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-top:64px;padding-top:28px;border-top:2px solid var(--accent);
+}
+.bottom-nav a{
+  font-family:'Noto Sans SC',sans-serif;font-size:14px;
+  color:var(--accent);text-decoration:none;letter-spacing:1px;
+  padding:8px 16px;border:1px solid var(--accent-light);border-radius:4px;
+  transition:all 0.2s ease;
+}
+.bottom-nav a:hover{
+  background:var(--paper-warm);border-color:var(--accent);
+}
+.bottom-nav .placeholder{
+  font-family:'Noto Sans SC',sans-serif;font-size:12px;
+  color:var(--ink-faint);letter-spacing:1px;
+}
+
+/* Responsive */
+@media(max-width:600px){
+  .wrapper{padding:32px 20px 80px;}
+  h1{font-size:22px;}
+  p{font-size:15.5px;line-height:1.95;}
+}
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+  <div class="topbar">
+    <a class="back" href="../index.html">← 源</a>
+    <span class="brand">源律</span>
+  </div>
+
+  <div class="chapter-title">第四章</div>
+  <h1>态相装甲</h1>
+
+  <div class="content">
+<p>方舟资本的投资到账用了十二天。三千万。</p>
+<p>陈原在中关村租了一间1200平方米的厂房，注册了"源相科技"。公司只有他一个人和三个从物理所借来的研究生。第一台设备是他自己设计的工业级太赫兹相控阵——覆盖面积4平方米，功率密度1.2瓦每平方厘米，频率精度0.005太赫兹。成本四十七万。同样的参数，进口设备报价三百八十万。</p>
+<p>第一个产品方向他考虑了三天。</p>
+<p>透明钢有展示价值，但商业市场有限——谁需要透明的钢墙？建筑行业有玻璃，汽车行业有聚碳酸酯，透明钢的优势不够碾压性。</p>
+<p>室温超导的学术意义巨大，但工程化需要解决电流密度、稳定性、太赫兹源的持续供电等一系列问题。至少还要两年。</p>
+<p>超弹性体、完美吸收体、热超导体——每一个都有应用场景，但每一个都需要配套的工程设计。</p>
+<p>直到周岩在一次晚餐上随口说了一句话："航天系统的隔热瓦又出问题了。上次返回舱差点烧穿。"</p>
+<p>陈原放下了筷子。</p>
+<p>航天隔热瓦。目前用的是碳碳复合材料和气凝胶毡——能在1600度高温下工作，但脆性大、易破损、不可重复使用。每次返回任务后都要更换，成本极高。更关键的是：现有隔热瓦是"被动"的——它只能承受特定温度范围的热冲击，超出了就失效。</p>
+<p>但如果用态相材料呢？</p>
+<p>316L不锈钢在7.2太赫兹下硬度超过金刚石三倍，在5.5太赫兹下热导率提升四个数量级，在2.4太赫兹下化学惰性——不怕氧化、不怕酸。如果能在再入大气层时根据温度梯度实时切换态相，一面装甲可以在高温区切换为热超导态（快速导散热量），在低温区保持正常态（结构强度），在化学腐蚀区切换为惰性态（防氧化）。</p>
+<p>一面装甲。多种状态。实时切换。可重复使用。</p>
+<p>陈原连夜写了产品方案，第二天发给了周岩。周岩看完后打了三个电话——分别给航天科技集团、国防科工局和一位不愿透露姓名的院士。</p>
+<p>四十八小时后，陈原接到了航天科技集团第五研究院技术部的电话。</p>
+<hr />
+<p>态相装甲的研发比预期顺利得多。核心难题不是材料——316L不锈钢便宜到可以论吨买——而是太赫兹相控阵的小型化和实时频率切换。</p>
+<p>陈原用了四个月。</p>
+<p>第一个月：设计嵌入式太赫兹源。把相控阵从4平方米压缩到0.3平方米，集成到装甲板背面的夹层中。功率密度不变，但总功耗降到了30瓦——一块军用电池可以供电12小时。</p>
+<p>第二个月：开发实时切换算法。装甲表面布满温度、压力、化学传感器，数据输入一个反馈控制系统，实时计算需要的态相频率并调整太赫兹输出。切换速度——从4.2太赫兹跳到7.2太赫兹——只需要0.8毫秒。</p>
+<p>第三个月：制造原型。1米×1米×2厘米的316L装甲板，正面抛光，背面集成太赫兹阵列和控制系统。总重31公斤——比现有航天隔热瓦轻40%。</p>
+<p>第四个月：测试。</p>
+<p>测试在航天科技集团第五研究院的等离子风洞进行。风洞可以模拟返回舱再入大气层的热环境——温度峰值2200开尔文，热流密度3.5兆瓦每平方米，持续30分钟。</p>
+<p>传统隔热瓦在这个条件下可以存活，但表面会出现裂纹和烧蚀。测试后必须更换。</p>
+<p>陈原的态相装甲安装在测试台上。传感器和太赫兹系统启动。风洞点火。</p>
+<p>等离子流以每秒7公里的速度撞击装甲板表面。表面温度在2秒内升至1800开尔文。</p>
+<p>装甲板的热超导态在0.8毫秒内激活——5.5太赫兹。表面热量被以四个数量级的速度传导到装甲背面，背面的散热鳍片将热量辐射出去。正面温度从1800开尔文降至620开尔文。</p>
+<p>风洞操作员看着温度曲线，以为传感器坏了。他换了传感器，重测。一样。</p>
+<p>2200开尔文。装甲板正面温度峰值680开尔文。背面温度52摄氏度。传统隔热瓦在同样条件下正面2000+开尔文，背面150-200摄氏度。</p>
+<p>30分钟测试结束。装甲板从风洞中取出。</p>
+<p>表面完好。无裂纹。无烧蚀。无变色。</p>
+<p>风洞操作员用手指摸了一下装甲板表面。光滑的。微温的。像一块刚从烤箱里拿出来的金属板。</p>
+<p>"再来一次。"他说。</p>
+<p>第二次测试。同样参数。同样的结果。表面完好。</p>
+<p>第三次。第四次。第五次。</p>
+<p>五次再入模拟。零损伤。零更换需求。</p>
+<p>测试报告送到航天科技集团总工程师的办公桌上时，总工程师沉默了很久。然后他拿起电话，拨了一个号码。</p>
+<p>"方总，有个东西你得亲自来看看。"</p>
+<hr />
+<p>远辰科技的反应比陈原预想的快。</p>
+<p>态相装甲风洞测试的消息在航天系统内部传开的同时，方启明的情报网也截获了。三天后，赵恒出现在源相科技的办公室门口——这次他没有端星巴克，而是提着一个公文包。</p>
+<p>"老陈，恭喜。"赵恒坐下来，环顾了一圈简陋的办公室，"四个月做出可重复使用的航天隔热装甲，这个速度在行业里闻所未闻。"</p>
+<p>"有什么事？"</p>
+<p>赵恒打开公文包，取出一份文件。"远辰科技愿意以二十亿估值收购源相科技100%股权。你个人可以保留10%的技术股，同时出任远辰的首席科学家。年薪五百万，外加研发预算独立审批权。"</p>
+<p>二十亿。</p>
+<p>陈原的公司成立四个月。员工六个人。设备价值两百万。账上余额一千八百万。唯一的资产是一项未公开的技术和一块通过了风洞测试的装甲板。</p>
+<p>二十亿。</p>
+<p>赵恒看着陈原的表情，加了一注："方总说了，如果你愿意合并，远辰的供应链、客户关系和政府资源全部向你开放。态相装甲可以从航天扩展到军工、能源、交通——远辰有渠道。你自己做，这些渠道你要建五年。"</p>
+<p>陈原看着那份收购文件。二十亿。如果签了字，他这辈子不用再做任何事。一个从河南农村出来的博士后，二十八岁，身价两亿。</p>
+<p>他把文件推回去。</p>
+<p>"不卖。"</p>
+<p>赵恒的笑容凝固了一秒。"老陈——"</p>
+<p>"赵恒，你知道方启明收购技术之后怎么操作吗？"陈原说，"他买下来，压在手里，等市场上的竞争技术全部死掉，然后高价卖给军方。他赚的是垄断差价。技术在他手里不会进步——进步了就不值钱了。他要的是停滞。"</p>
+<p>"这是商业判断，不是技术判断。"赵恒说。</p>
+<p>"我的技术不卖给做商业判断的人。"</p>
+<p>赵恒沉默了很长时间。然后他站起来，拿起公文包。</p>
+<p>"老陈，方总让我带句话。他说：远辰的门一直开着。但市场不会等你。"</p>
+<p>"我知道。"</p>
+<p>赵恒走到门口，停下来。"还有一件事。航天科技集团第五研究院——远辰和他们有二十年的合作关系。他们的隔热瓦供应商一直是远辰。"</p>
+<p>陈原明白了。这不是威胁。这是事实。远辰不会直接抢他的技术——但远辰可以用自己在航天系统的关系网，让源相科技的装甲进不了采购目录。</p>
+<p>"谢谢提醒。"陈原说。</p>
+<p>赵恒走了。</p>
+<p>陈原坐在办公室里，看着窗外中关村的夜景。霓虹灯、车流、外卖骑手的电动车灯——一切都在动。城市在动。人在动。电子在导线里动。光子在光纤里动。</p>
+<p>他拿起手机，拨了周岩的号码。</p>
+<p>"周岩，我需要那两亿了。"</p>
+<p>"远辰出手了？"</p>
+<p>"赵恒刚走。二十亿收购。我拒了。他暗示远辰会封锁我的航天渠道。"</p>
+<p>电话那头沉默了两秒。"两亿明天到账。但陈原——远辰不是最大的问题。方启明背后有人。你做好准备。"</p>
+<p>"我做好了。"</p>
+<p>陈原挂掉电话，在白板上写了两个方向：</p>
+<ol>
+<li>航天：绕开远辰，直接找民营航天公司合作。</li>
+<li>新方向：态相装甲只是第一个应用。真正的核心不是某一种产品——是态相技术本身。</li>
+</ol>
+<p>他在第二个方向下面画了一条线，写了三个字：<strong>通用性。</strong></p>
+<p>态相共振不只适用于316L不锈钢。他已经在铜、硅、氧化铝上验证过。但那只是三种材料。如果态相共振是普适的——如果任何晶体材料都有自己的态相频率——那这项技术的边界就不是某一种产品，而是所有固体材料。</p>
+<p>他需要验证态相共振的普适性。但那需要大量的扫频实验——每种材料扫描0.5到10太赫兹，记录所有态相点。</p>
+<p>这不是一个人能完成的工作。他需要算力。大量的算力。</p>
+<p>而算力，即将成为他的第二个突破——一个远比透明钢和态相装甲更深、更根本的突破。</p>
+<p>但此刻他不知道这一点。此刻他只知道：方启明的门不会一直开着，但他的门也不会一直关着。</p>
+<p>他擦掉白板上的字，重新写了一行：</p>
+<p><strong>六个月。绕开远辰。做出第一个产品。</strong></p>
+<p>然后他关灯，锁门，走出办公室。中关村深夜的空气里有烧烤的味道和服务器散热的热风。一切都在动。</p>
+<p>他也是。</p>
+  </div>
+
+  <div class="bottom-nav">
+    <a href="chapter-03-当众打脸.html">← 当众打脸</a>
+    <span class="placeholder">4 / 12</span>
+    <a href="chapter-05-记忆.html">记忆 →</a>
+  </div>
+
+</div>
+</body>
+</html>

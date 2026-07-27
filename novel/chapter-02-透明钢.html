@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>透明钢 - 源律</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500&display=swap');
+
+:root {
+  --ink:#1a1a1a; --ink-soft:#333; --ink-light:#666; --ink-faint:#999;
+  --paper:#fdfcf8; --paper-warm:#f6f3ec;
+  --accent:#7a5c00; --accent-mid:#a8802e; --accent-light:#cbb06a;
+  --rule:#d8d2c2;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  font-family:'Noto Serif SC','Songti SC','STSong',serif;
+  background:var(--paper);color:var(--ink);line-height:2.0;font-size:16.5px;
+}
+
+.wrapper{max-width:680px;margin:0 auto;padding:48px 28px 120px;}
+
+/* Top nav */
+.topbar{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-bottom:48px;padding-bottom:20px;border-bottom:1px solid var(--rule);
+}
+.topbar .back{
+  font-family:'Noto Sans SC',sans-serif;font-size:13px;
+  color:var(--accent);text-decoration:none;letter-spacing:1px;
+}
+.topbar .back:hover{color:var(--ink);}
+.topbar .brand{
+  font-family:'Noto Sans SC',sans-serif;font-size:12px;
+  color:var(--ink-faint);letter-spacing:3px;
+}
+
+/* Chapter title */
+.chapter-title{
+  font-size:13px;color:var(--accent);font-family:'Noto Sans SC',sans-serif;
+  letter-spacing:3px;margin-bottom:8px;font-weight:600;
+}
+h1{
+  font-size:26px;font-weight:700;margin-bottom:40px;
+  letter-spacing:1px;line-height:1.4;
+}
+
+/* Body content */
+h2{font-size:20px;font-weight:600;margin:36px 0 16px;letter-spacing:0.5px;}
+h3{font-size:17px;font-weight:600;margin:28px 0 12px;}
+
+p{
+  margin-bottom:18px;text-align:justify;text-indent:2em;
+}
+strong{font-weight:600;}
+em{font-style:italic;}
+
+hr{
+  border:none;border-top:1px solid var(--rule);
+  margin:32px auto;width:60px;
+}
+
+/* Dialogue styling */
+blockquote{
+  border:none;margin:0;padding:0;
+}
+
+/* Bottom nav */
+.bottom-nav{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-top:64px;padding-top:28px;border-top:2px solid var(--accent);
+}
+.bottom-nav a{
+  font-family:'Noto Sans SC',sans-serif;font-size:14px;
+  color:var(--accent);text-decoration:none;letter-spacing:1px;
+  padding:8px 16px;border:1px solid var(--accent-light);border-radius:4px;
+  transition:all 0.2s ease;
+}
+.bottom-nav a:hover{
+  background:var(--paper-warm);border-color:var(--accent);
+}
+.bottom-nav .placeholder{
+  font-family:'Noto Sans SC',sans-serif;font-size:12px;
+  color:var(--ink-faint);letter-spacing:1px;
+}
+
+/* Responsive */
+@media(max-width:600px){
+  .wrapper{padding:32px 20px 80px;}
+  h1{font-size:22px;}
+  p{font-size:15.5px;line-height:1.95;}
+}
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+  <div class="topbar">
+    <a class="back" href="../index.html">← 源</a>
+    <span class="brand">源律</span>
+  </div>
+
+  <div class="chapter-title">第二章</div>
+  <h1>透明钢</h1>
+
+  <div class="content">
+<p>陈原用了三周完成全频段扫描。</p>
+<p>结果远远超出预期。316L不锈钢在0.5到8.0太赫兹之间共有七个共振响应点，每个点对应一种完全不同的性质组合：</p>
+<p>4.2太赫兹——透明绝缘体。透过率12.7%，导电率降三个数量级。
+6.0太赫兹——室温超导体。零电阻，完全抗磁。
+1.8太赫兹——超弹性体。杨氏模量下降99%，可拉伸至原长的3000%不断裂。
+3.1太赫兹——完美吸收体。可见光吸收率99.97%，几乎绝对黑体。
+5.5太赫兹——热超导体。热导率提升四个数量级，无温差传导。
+7.2太赫兹——刚性极值。硬度超过金刚石三倍。
+2.4太赫兹——化学惰性。与浓硫酸、王水、氢氟酸零反应。</p>
+<p>一种材料。七种状态。七种完全不同的性质组合。只需要改变振动频率。</p>
+<p>陈原没有急着写论文。他知道第七次拒稿的教训——没有理论解释的数据，发了也没人信。他需要理论。</p>
+<p>理论从数据中来。他把七个共振点的性质变化画成了一张相图：横轴频率，纵轴性质强度。七个点在图上形成了一个规律——不是随机的，是有结构的。相邻共振点之间的频率间隔越来越小，性质变化的幅度越来越大。</p>
+<p>像一条加速曲线。像什么东西在展开。</p>
+<p>他花了两天推导数学模型。从经典的晶格动力学出发，修改了玻恩-冯卡门边界条件，引入了一个新变量——集体振动模式的拓扑量子数。修改后的模型预测：任何晶体材料都存在一组离散的"态相共振频率"，在共振频率下，材料的所有宏观性质同时发生跳变。跳变的方向和幅度由材料的晶格对称性决定。</p>
+<p>316L不锈钢的七个态相只是特例。换一种材料——铜、硅、石墨烯——共振频率会变，性质组合会变，但规律不变：离散频率，全性质跳变。</p>
+<p>他把模型写成论文。这一次他没有投Nature Materials。他投了Physical Review Letters。</p>
+<p>审稿意见回来得很快——一个月。两个审稿人要求补充实验数据，第三个审稿人的意见只有一行字："如果这是真的，固体物理教科书要重写。"</p>
+<p>论文被接收了。条件是补充至少三种不同材料的态相共振数据。</p>
+<p>陈原在三天内补完了铜、硅和氧化铝的实验。铜在3.8太赫兹变成铁磁性绝缘体。硅在5.1太赫兹变成金属。氧化铝在2.7太赫兹变成超导体。</p>
+<p>数据完美。模型预测和实验误差在2%以内。</p>
+<p>论文发表后没有立刻引起轰动。PRL的读者群是物理学家，他们谨慎、多疑、忙于自己的课题。论文被引用了三次，都是无关痛痒的评论性引用。</p>
+<p>但陈原不在乎。他不是在等学术界认可。他在等另一个人。</p>
+<hr />
+<p>赵恒是陈原在中科院的同期博士后，研究柔性电子材料。两人同届进所，关系不好不坏，偶尔在走廊里点头。赵恒去年跳槽去了远辰科技——国内最大的先进材料公司——做研发总监，年薪百万。他是张维康推荐过去的。</p>
+<p>陈原论文发表后的第三天，赵恒出现在他的实验室门口。</p>
+<p>"老陈，看到你那篇PRL了。"赵恒靠在门框上，手里端着一杯星巴克，"态相共振？听着挺唬人。"</p>
+<p>"实验数据是真的。"</p>
+<p>"我信数据是真的。但有什么用呢？"赵恒喝了口咖啡，"你在实验室里用0.3瓦的太赫兹源让一小块钢变透明。要放大到工业级别，需要持续输入太赫兹波，能耗你得算过吧？"</p>
+<p>"算过。维持1平方米316L不锈钢在4.2太赫兹态相，需要功率密度约0.8瓦每平方厘米。一面1平方米的钢板需要80瓦。比LED灯泡还省电。"</p>
+<p>赵恒的表情变了一下。他显然没有预期陈原已经算过能耗。</p>
+<p>"但声波源呢？你现在用的是实验室的压电太赫兹发射器，覆盖面积有多大？两平方厘米？要覆盖一平方米，你得用相控阵太赫兹源——那东西一台两百万。"</p>
+<p>"我自己能做。成本十五万。"</p>
+<p>赵恒沉默了几秒。然后他笑了笑。"老陈，远辰科技对这种前沿材料很感兴趣。你要是愿意把技术授权给我们，我可以给你开一个很好的条件。"</p>
+<p>"什么条件？"</p>
+<p>"技术转让费五百万，外加远辰首席科学家的职位。年薪你开。"</p>
+<p>五百万。对一个月薪八千的博士后来说，这不是一笔可以轻易拒绝的数字。但陈原知道赵恒代表的是谁——远辰科技的CEO方启明，一个靠收购高校专利发家的商人。方启明的模式是：低价买入实验室技术，包装成产品，高价卖给军方或航天系统。他赚的是差价，不是技术。</p>
+<p>"不卖。"</p>
+<p>赵恒的笑收敛了一点。"老陈，你考虑清楚。一篇PRL不代表什么。学术界每年发几千篇PRL，真正转化成产品的不到1%。你没有工程团队，没有资金，没有产业链。一个人在实验室里搓出来的东西，走不出实验室。"</p>
+<p>"那就让它走出来。"</p>
+<p>赵恒看了他一眼，没再说话，转身走了。</p>
+<hr />
+<p>赵恒走后的第二天，陈原做了一个决定。他要造一个别人无法忽视的东西。</p>
+<p>不是论文。不是数据。是一个任何人看一眼就会哑口无言的实物。</p>
+<p>透明钢。</p>
+<p>他要造一块1米×1米×1厘米的316L不锈钢板，在4.2太赫兹的持续激发下保持半透明状态。不是实验室里2平方厘米的样品——是一整面墙那么大的透明钢板。</p>
+<p>如果有人看到一面钢墙变成玻璃，没有人再说"噪声"。</p>
+<p>他用了六周。</p>
+<p>第一周：设计可调频相控阵太赫兹源。他用3D打印的声学超材料透镜阵列替代了传统的压电陶瓷，把成本压到了八万块。覆盖面积1.2平方米，频率精度0.01太赫兹。</p>
+<p>第二周：制备1平方米的316L不锈钢板。标准工业板材，厚1厘米，重78公斤。表面抛光到镜面级。</p>
+<p>第三周：调试。太赫兹源阵列安装在钢板背面的框架上，72个发射单元以0.02太赫兹的步进精度同步发射4.2太赫兹声波。调试花了整整五天——每个单元的相位、功率、聚焦点都要精确校准，稍有偏差就会出现态相不均匀，钢板表面出现明暗条纹。</p>
+<p>第四周：第一次全功率测试。</p>
+<p>陈原一个人在实验室里，关掉了所有灯。黑暗中，1平方米的钢板靠在墙上，是一面黑色的镜子，反射着应急灯的绿光。</p>
+<p>他按下开关。</p>
+<p>72个太赫兹发射单元同时启动。声波穿透钢板，在晶格中激发共振。钢板表面开始震颤——不是物理震动，肉眼看不到任何运动——但钢板的光学性质在0.3秒内完成了跳变。</p>
+<p>反射率从95%降到8%。透过率从0.03%升到14.1%。</p>
+<p>钢板变成了半透明的。</p>
+<p>陈原站在钢板后面，透过钢板看到了对面的墙。应急灯的绿光透过钢板，在他脸上投下淡绿色的光斑。他伸出手指，按在钢板上——表面冰凉、坚硬，是金属的触感。但他能透过它看到自己的手指。</p>
+<p>1厘米厚的钢板。透明。金属。同时是两种东西。</p>
+<p>他在钢板前站了很久。</p>
+<p>然后他拿起手机，拍了一张照片。照片里，透过半透明的钢板，可以清晰地看到实验室对面的白板和上面的公式。</p>
+<p>他把照片发给了三个人：张维康、赵恒、和PRL的责任编辑。</p>
+<p>附言只有一句话："数据是真的。"</p>
+  </div>
+
+  <div class="bottom-nav">
+    <a href="chapter-01-第七次拒稿.html">← 第七次拒稿</a>
+    <span class="placeholder">2 / 12</span>
+    <a href="chapter-03-当众打脸.html">当众打脸 →</a>
+  </div>
+
+</div>
+</body>
+</html>

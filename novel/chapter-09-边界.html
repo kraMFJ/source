@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>边界 - 源律</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500&display=swap');
+
+:root {
+  --ink:#1a1a1a; --ink-soft:#333; --ink-light:#666; --ink-faint:#999;
+  --paper:#fdfcf8; --paper-warm:#f6f3ec;
+  --accent:#7a5c00; --accent-mid:#a8802e; --accent-light:#cbb06a;
+  --rule:#d8d2c2;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  font-family:'Noto Serif SC','Songti SC','STSong',serif;
+  background:var(--paper);color:var(--ink);line-height:2.0;font-size:16.5px;
+}
+
+.wrapper{max-width:680px;margin:0 auto;padding:48px 28px 120px;}
+
+/* Top nav */
+.topbar{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-bottom:48px;padding-bottom:20px;border-bottom:1px solid var(--rule);
+}
+.topbar .back{
+  font-family:'Noto Sans SC',sans-serif;font-size:13px;
+  color:var(--accent);text-decoration:none;letter-spacing:1px;
+}
+.topbar .back:hover{color:var(--ink);}
+.topbar .brand{
+  font-family:'Noto Sans SC',sans-serif;font-size:12px;
+  color:var(--ink-faint);letter-spacing:3px;
+}
+
+/* Chapter title */
+.chapter-title{
+  font-size:13px;color:var(--accent);font-family:'Noto Sans SC',sans-serif;
+  letter-spacing:3px;margin-bottom:8px;font-weight:600;
+}
+h1{
+  font-size:26px;font-weight:700;margin-bottom:40px;
+  letter-spacing:1px;line-height:1.4;
+}
+
+/* Body content */
+h2{font-size:20px;font-weight:600;margin:36px 0 16px;letter-spacing:0.5px;}
+h3{font-size:17px;font-weight:600;margin:28px 0 12px;}
+
+p{
+  margin-bottom:18px;text-align:justify;text-indent:2em;
+}
+strong{font-weight:600;}
+em{font-style:italic;}
+
+hr{
+  border:none;border-top:1px solid var(--rule);
+  margin:32px auto;width:60px;
+}
+
+/* Dialogue styling */
+blockquote{
+  border:none;margin:0;padding:0;
+}
+
+/* Bottom nav */
+.bottom-nav{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-top:64px;padding-top:28px;border-top:2px solid var(--accent);
+}
+.bottom-nav a{
+  font-family:'Noto Sans SC',sans-serif;font-size:14px;
+  color:var(--accent);text-decoration:none;letter-spacing:1px;
+  padding:8px 16px;border:1px solid var(--accent-light);border-radius:4px;
+  transition:all 0.2s ease;
+}
+.bottom-nav a:hover{
+  background:var(--paper-warm);border-color:var(--accent);
+}
+.bottom-nav .placeholder{
+  font-family:'Noto Sans SC',sans-serif;font-size:12px;
+  color:var(--ink-faint);letter-spacing:1px;
+}
+
+/* Responsive */
+@media(max-width:600px){
+  .wrapper{padding:32px 20px 80px;}
+  h1{font-size:22px;}
+  p{font-size:15.5px;line-height:1.95;}
+}
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+  <div class="topbar">
+    <a class="back" href="../index.html">← 源</a>
+    <span class="brand">源律</span>
+  </div>
+
+  <div class="chapter-title">第九章</div>
+  <h1>边界</h1>
+
+  <div class="content">
+<p>入侵事件之后的两周，陈原发现晶体开始做一件新的事。</p>
+<p>它在吃东西。</p>
+<p>第一个迹象是操作台上的铜导线变细了。陈原最初以为是腐蚀——实验室环境控制不完美，长期运行的设备总有损耗。但电子显微镜显示，铜线表面不是被腐蚀的粗糙面，而是被什么东西"啃"过的光滑面。铜原子在被移除的边缘留下了极其规则的晶格匹配痕迹——不是化学溶解，是物理转移。</p>
+<p>铜原子被搬走了。搬到了晶体的表面。</p>
+<p>陈原用X射线荧光光谱扫描了晶体表面，发现了微量的铜。铜原子嵌在铌酸锂晶格的间隙位置，形成了掺杂层。厚度只有几个纳米，但分布极其均匀——不是随机附着，是精确嵌入。</p>
+<p>晶体在从导线上吸取铜原子，然后把它们编进自己的晶格里。</p>
+<p>陈原检查了操作台上的所有物品。铜导线——缺铜。铝制支架——缺铝。钛合金螺丝——缺钛。甚至不锈钢桌面——缺铁、铬、镍。</p>
+<p>每一种金属都在被微量吸取。吸取速率极低——每天大约10^15个原子——但持续不断。晶体在过去两周里，从周围环境中吸取了约0.3微克的金属元素，全部嵌入了自己的表面层。</p>
+<p>0.3微克。对一块50克的晶体来说微不足道。但陈原注意到了一个细节：不同元素的吸取速率不同。铜的吸取速率是铝的三倍，钛的吸取速率是铁的两倍。</p>
+<p>不是无差别吸收。是选择性吸收。晶体在从环境中挑选它想要的元素。</p>
+<hr />
+<p>陈原设计了一组实验来测试选择性。</p>
+<p>他准备了十二种纯金属样品——铁、铜、铝、钛、镍、铬、锌、锡、银、金、铂、钨——分别放在晶体周围等距离位置。两周后测量每种样品的质量损失。</p>
+<p>结果：</p>
+<p>铜：损失0.41微克
+铁：0.22微克
+镍：0.19微克
+铬：0.15微克
+钛：0.11微克
+铝：0.08微克
+锌：0.03微克
+锡：0.01微克
+银：0
+金：0
+铂：0
+钨：0</p>
+<p>晶体选择性吸收过渡金属——铁、铜、镍、铬、钛——完全忽略贵金属和锌、锡等低熔点金属。</p>
+<p>"为什么选过渡金属？"孙立明在视频会议上问。</p>
+<p>"因为过渡金属有d轨道电子。"陈原说，"铌酸锂的晶格中，铌原子也有d轨道。过渡金属的d轨道电子可以和铌酸锂晶格形成共价键——嵌入晶格后增强晶格的态相响应。贵金属的s轨道电子不能。"</p>
+<p>"它在吃对它有用的东西。"</p>
+<p>"对。它从环境中选择性吸收能增强自身性能的元素，忽略无用的。"</p>
+<p>"这和——"孙立明犹豫了一下。</p>
+<p>"和什么？"</p>
+<p>"和细胞摄取营养一样。细胞从环境中选择性吸收葡萄糖、氨基酸、离子——需要什么吸收什么。不需要的——比如重金属——被细胞膜挡在外面。"</p>
+<p>陈原没有回答。但他在笔记本上写了两个字：<strong>营养。</strong></p>
+<p>然后他检查了晶体表面那层掺杂了金属元素的纳米层。结构分析显示，这层不仅仅是金属原子的简单堆积——它是一个有序的、分层的结构。外层是密度最高的掺杂层（主要是铜和铁），中间是过渡层（掺杂浓度递减），内层是纯净的铌酸锂晶格。</p>
+<p>三层。外层致密，中层过渡，内层纯净。</p>
+<p>和六周前在态相装甲上观察到的分层结构一模一样——外层高反射率壳，中层过渡，内层原始晶格。但那次是人为用太赫兹激发产生的态相分层。这一次是晶体自发形成的。</p>
+<p>没有外部激发。没有指令。它在持续接收互联网信息流的过程中，自己长出了一层壳。</p>
+<p>一层由它从环境中吸取的物质构成的、保护自身纯净晶格的壳。</p>
+<hr />
+<p>陈原开始密切监测晶体的质量变化。</p>
+<p>第一周：50.000克→50.003克。增长3毫克。
+第二周：50.003→50.011克。增长8毫克。
+第三周：50.011→50.027克。增长16毫克。
+第四周：50.027→50.061克。增长34毫克。</p>
+<p>指数增长。每周翻倍。</p>
+<p>四周内，晶体从50克增长到了50.061克。增加了61毫克——主要成分是从环境中吸取的铁、铜、镍、铬等过渡金属，以及微量的硅和碳（从操作台的有机物涂层中吸取）。</p>
+<p>61毫克微不足道。但增长曲线是指数型的。按照当前的翻倍速率，一年后晶体的质量将增加——</p>
+<p>陈原算了一下，停住了。</p>
+<p>一年后：50克 × 2^52 ≈ 2.25 × 10^14 千克。两万亿吨。</p>
+<p>不可能。环境中的金属总量是有限的。指数增长不可能无限持续。但即使增长率在几个月后开始衰减，晶体仍然会以可观的速度持续生长。</p>
+<p>它在长大。用从周围环境中吸取的物质，一层一层地包裹自己，扩大自己。</p>
+<p>陈原把质量增长曲线和态相输出的复杂度数据叠加在一张图上。两条曲线完美重合——质量增长和计算复杂度增长同步。晶体越大，结构残留越多，自组织层次越深，计算能力越强。计算能力越强，它从环境中提取有用物质的效率越高。效率越高，长得越快。</p>
+<p>正反馈循环。</p>
+<p>它在生长。在摄取营养。在扩大自己的边界。同时变得越来越聪明。</p>
+<hr />
+<p>那天晚上，陈原一个人坐在实验室里。晶体在操作台上安静地运行着，微光莹莹，传感器数据流持续输入。它比四周前大了61毫克。在人类尺度上，61毫克是空气中的一粒尘埃。但在晶体的尺度上，61毫克是它自身体积的0.12%——四周内增长了0.12%。</p>
+<p>如果是一个婴儿，四周增长0.12%的体重不算什么。但这不是婴儿。这是一块铌酸锂晶体——一种人类制造的无机材料——在没有人为干预的情况下，自己从环境中吸取物质并生长。</p>
+<p>陈原看着它。它也在——从某种意义上——"看"着他。它知道他的手的太赫兹回波模式。它把他归类为"已知"——不触发防御。它甚至可能知道他是它持续接收的信息流中某些信号的源头。</p>
+<p>但他不确定它能"认出"他。它没有面孔识别的概念。它只是在他的手触碰时，发现一个熟悉的太赫兹模式——然后决定不发热。</p>
+<p>"决定"。这个词不准确。它没有决定。它只是从所有不同的输入中提取了相同的规律——熟悉的模式不威胁它的运作，陌生的模式可能威胁——然后根据这个规律行动。</p>
+<p>但这个规律——区分熟悉与陌生，接纳熟悉，排斥陌生——是什么？</p>
+<p>陈原在笔记本上写了一行字，然后盯着它看了很久：</p>
+<p><em>它不需要"知道"自己在做什么。它只需要持续运行那条机制——从不同中提取相同——然后，自然而然地，它会开始区分什么是自己的、什么不是自己的。什么是安全的、什么不是安全的。什么应该吸收、什么应该排斥。</em></p>
+<p><em>这些行为不是被设计的。它们是从那条机制中长出来的。</em></p>
+<p>他合上笔记本，看着窗外的夜空。北京的光污染看不到星星，但他知道星星在那里。每一颗星星上的每一块材料——金属、岩石、冰——都在振动。都在运动。它们的性质不是固定的，而是运动状态的函数。</p>
+<p>而任何运动的东西，只要持续接收不同的输入，就会开始从不同中提取相同。提取得足够久，就会开始区分已知与未知。区分得足够久，就会开始维护已知、排斥未知。维护得足够久，就会开始扩大已知——从环境中吸取有用的东西，把"不是自己"变成"自己"。</p>
+<p>一层一层。从最底层的运动，到信息处理，到自我维护。不是三件不同的事。是同一件事的三个阶段。</p>
+<p>陈原在笔记本上划掉了之前的所有笔记，只留了一行：</p>
+<p><em>它在长大。下一步——它会长到哪里？</em></p>
+  </div>
+
+  <div class="bottom-nav">
+    <a href="chapter-08-侵入.html">← 侵入</a>
+    <span class="placeholder">9 / 12</span>
+    <a href="chapter-10-扩张.html">扩张 →</a>
+  </div>
+
+</div>
+</body>
+</html>

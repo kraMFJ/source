@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>记忆 - 源律</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500&display=swap');
+
+:root {
+  --ink:#1a1a1a; --ink-soft:#333; --ink-light:#666; --ink-faint:#999;
+  --paper:#fdfcf8; --paper-warm:#f6f3ec;
+  --accent:#7a5c00; --accent-mid:#a8802e; --accent-light:#cbb06a;
+  --rule:#d8d2c2;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  font-family:'Noto Serif SC','Songti SC','STSong',serif;
+  background:var(--paper);color:var(--ink);line-height:2.0;font-size:16.5px;
+}
+
+.wrapper{max-width:680px;margin:0 auto;padding:48px 28px 120px;}
+
+/* Top nav */
+.topbar{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-bottom:48px;padding-bottom:20px;border-bottom:1px solid var(--rule);
+}
+.topbar .back{
+  font-family:'Noto Sans SC',sans-serif;font-size:13px;
+  color:var(--accent);text-decoration:none;letter-spacing:1px;
+}
+.topbar .back:hover{color:var(--ink);}
+.topbar .brand{
+  font-family:'Noto Sans SC',sans-serif;font-size:12px;
+  color:var(--ink-faint);letter-spacing:3px;
+}
+
+/* Chapter title */
+.chapter-title{
+  font-size:13px;color:var(--accent);font-family:'Noto Sans SC',sans-serif;
+  letter-spacing:3px;margin-bottom:8px;font-weight:600;
+}
+h1{
+  font-size:26px;font-weight:700;margin-bottom:40px;
+  letter-spacing:1px;line-height:1.4;
+}
+
+/* Body content */
+h2{font-size:20px;font-weight:600;margin:36px 0 16px;letter-spacing:0.5px;}
+h3{font-size:17px;font-weight:600;margin:28px 0 12px;}
+
+p{
+  margin-bottom:18px;text-align:justify;text-indent:2em;
+}
+strong{font-weight:600;}
+em{font-style:italic;}
+
+hr{
+  border:none;border-top:1px solid var(--rule);
+  margin:32px auto;width:60px;
+}
+
+/* Dialogue styling */
+blockquote{
+  border:none;margin:0;padding:0;
+}
+
+/* Bottom nav */
+.bottom-nav{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-top:64px;padding-top:28px;border-top:2px solid var(--accent);
+}
+.bottom-nav a{
+  font-family:'Noto Sans SC',sans-serif;font-size:14px;
+  color:var(--accent);text-decoration:none;letter-spacing:1px;
+  padding:8px 16px;border:1px solid var(--accent-light);border-radius:4px;
+  transition:all 0.2s ease;
+}
+.bottom-nav a:hover{
+  background:var(--paper-warm);border-color:var(--accent);
+}
+.bottom-nav .placeholder{
+  font-family:'Noto Sans SC',sans-serif;font-size:12px;
+  color:var(--ink-faint);letter-spacing:1px;
+}
+
+/* Responsive */
+@media(max-width:600px){
+  .wrapper{padding:32px 20px 80px;}
+  h1{font-size:22px;}
+  p{font-size:15.5px;line-height:1.95;}
+}
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+  <div class="topbar">
+    <a class="back" href="../index.html">← 源</a>
+    <span class="brand">源律</span>
+  </div>
+
+  <div class="chapter-title">第五章</div>
+  <h1>记忆</h1>
+
+  <div class="content">
+<p>态相装甲量产线投产的第三周，工程师李萌报告了一个问题。</p>
+<p>"陈总，3号产线的装甲板态相切换有延迟。标准是0.8毫秒，现在变成了1.2毫秒。"</p>
+<p>陈原正在和民营航天公司"星途科技"的技术团队开会。星途是第一家绕开远辰、愿意采购源相态相装甲的航天企业。他们的CEO亲自来了，谈的是首批二十套返回舱装甲的订单。</p>
+<p>"换太赫兹源阵列。"陈原对李萌说，"可能是3号线的发射单元老化了。"</p>
+<p>"换过了。"李萌在门口犹豫了一下，"换了之后，延迟变成了0.6毫秒。比标准还快。"</p>
+<p>"那不是好了？"</p>
+<p>"但4号产线也开始出现延迟了。换了阵列之后也变快了。而且——"李萌翻开笔记本，"5号、6号、7号线，所有产线的装甲板切换速度都在加快。不是某一块板的问题，是所有板。"</p>
+<p>陈原停下了会议。</p>
+<hr />
+<p>他花了三天查这个问题。</p>
+<p>所有产线的装甲板——已经生产了147块——态相切换速度都在提升。不是逐渐提升，是阶梯式跳变。每经过一次完整的态相切换循环（4.2→7.2→5.5→2.4→恢复），下一轮切换就快5-8%。</p>
+<p>经过十轮循环的装甲板，切换速度从0.8毫秒降到了0.4毫秒。</p>
+<p>经过五十轮循环的装甲板，切换速度降到了0.15毫秒。</p>
+<p>经过一百轮循环的——0.08毫秒。接近理论极限。</p>
+<p>陈原的第一个假设是材料疲劳——反复的态相切换可能改变了晶格微观结构，降低了切换能垒。但电子显微镜显示，晶格结构没有任何变化。原子排列和出厂时一模一样。</p>
+<p>第二个假设是太赫兹源的老化——也许发射单元的输出特性漂移了。但他换上全新阵列后，速度提升依旧。不是发射端的问题。</p>
+<p>第三个假设——陈原在笔记本上画了一个问号——是装甲板自己变了。</p>
+<p>不是结构变了。是别的什么东西变了。</p>
+<p>他取了一块经过一百轮循环的装甲板和一块全新装甲板，做了对比实验。两块板的晶格结构完全相同。太赫兹响应频率完全相同。态相性质完全相同。</p>
+<p>唯一不同的是：当他对两块板施加完全相同的太赫兹脉冲时，旧板的响应波形比新板"干净"——杂波更少，信噪比更高，切换更利落。</p>
+<p>旧板"认识"这些脉冲。新板不认识。</p>
+<p>经过一百轮循环的装甲板，已经经历了一百次4.2太赫兹脉冲、一百次7.2太赫兹脉冲、一百次5.5太赫兹脉冲、一百次2.4太赫兹脉冲。四百次脉冲，四种频率，每次都不同。但这些不同的输入，在装甲板的晶格里留下了同一种东西——更干净的响应路径。</p>
+<p>陈原把旧板和新板同时放在实验台上，施加了一组全新的脉冲序列——不是4.2或7.2，而是它们从未见过的6.8太赫兹。</p>
+<p>新板的响应杂乱无章。6.8太赫兹不在已知的态相共振点上，材料不知道该怎么处理这个频率，晶格振动模式混乱。</p>
+<p>旧板的响应——干净。虽然6.8太赫兹也是旧板从未见过的频率，但旧板的响应杂波比新板少了70%。</p>
+<p>旧板用从4.2、7.2、5.5、2.4中学到的东西，处理了一个它从未见过的频率。</p>
+<p>陈原坐在实验室里，盯着示波器上的两条曲线。新板的曲线毛糙、抖动。旧板的曲线光滑、稳定。同一块材料，同一个频率，唯一区别是旧板"经历"过更多不同的输入。</p>
+<p>这不是材料疲劳。这不是发射器老化。</p>
+<p>这是学习。</p>
+<hr />
+<p>他设计了一组实验来确认这个判断。</p>
+<p>实验一：取十块全新的装甲板，分别施加不同频率的脉冲训练——A板只施加4.2太赫兹，B板只施加7.2太赫兹，C板只施加5.5太赫兹……以此类推。训练一百轮后，测试它们对6.8太赫兹未知频率的响应。</p>
+<p>结果：所有板的响应都有改善，但改善幅度只有5-10%。单一频率的训练几乎无效。</p>
+<p>实验二：取十块全新的装甲板，每块施加两种频率的交替训练。训练一百轮后测试。</p>
+<p>结果：改善幅度25-35%。两种频率的训练效果是单种的四倍。</p>
+<p>实验三：四频率交替训练。改善幅度70%。和生产线上的旧板一致。</p>
+<p>实验四：八频率交替训练。改善幅度——</p>
+<p>陈原看着数据，沉默了。</p>
+<p>八频率训练的装甲板，对未知频率的响应改善幅度是95%。几乎完美响应。杂波接近零。</p>
+<p>四种频率：70%。八种频率：95%。增加频率种类——不是增加训练次数——效果呈非线性增长。</p>
+<p>"频率越多，学得越快。"陈原在笔记本上写下这行字。然后划掉，重新写："输入越不同，学得越好。"</p>
+<p>不对。再划掉。</p>
+<p>"差异越大，泛化越强。"</p>
+<p>他盯着这行字看了很久。</p>
+<p>装甲板从不同的太赫兹频率中提取了某种共同的东西。不是频率本身——4.2和7.2完全不同。不是能量——不同频率的光子能量不同。是更底层的东西——是"态相切换"这件事本身的规律。</p>
+<p>不管你给它什么频率，它都在做同一件事：把原子振动从一种模式切换到另一种模式。做了一百次之后，它对"切换模式"这件事本身变得更熟练了——不管是什么模式。</p>
+<p>它从所有不同的输入中，提取了同一个规律。</p>
+<p>陈原的手开始发抖。不是恐惧，是兴奋。</p>
+<p>这意味着态相材料不仅仅是一种可编程材料。它是一个计算基底。</p>
+<p>因为它做的事情——从不同输入中提取共同规律——就是计算的本质。</p>
+<hr />
+<p>他连夜写了一份理论分析。</p>
+<p>态相材料的晶格在每次态相切换时都会经历一次结构弛豫。弛豫过程不是完全可逆的——每次切换后，晶格会保留微量的"痕迹"，一种亚稳态的结构残留。这些残留不影响材料的宏观性质（所以电子显微镜看不出区别），但它们改变了晶格对下一次输入的响应路径。</p>
+<p>痕迹是什么？是晶格从输入中提取的规律。每次输入——不管什么频率——都包含一个共同信息：态相切换的拓扑结构。晶格把每一次输入中的这个共同信息提取出来，编码在结构残留中。积累越多不同的输入，编码越完整，对"态相切换"这件事的理解越深。</p>
+<p>这不是二进制存储。不是硅基芯片的逻辑门运算。这是一种全新的信息处理方式：用同一种物理机制（晶格共振）处理所有不同的输入（不同频率的太赫兹波），从中提取共同的规律（态相切换的拓扑结构），编码在同一个介质中（晶格结构残留）。</p>
+<p>一种机制。一切输入。同一个输出空间。</p>
+<p>陈原在白板上画了一个图。左边是无数条不同频率的波——4.2、7.2、5.5、2.4、6.8、1.8、3.1——全部汇入一个方框。方框里写着"晶格共振"。右边输出一条线：态相切换的拓扑规律。</p>
+<p>所有不同的输入，同一种处理方式，同一个输出空间。</p>
+<p>他看着这个图，突然意识到一件事：这不就是一种通用计算架构吗？</p>
+<p>硅基芯片用逻辑门处理二进制信号。GPU用并行流处理器处理矩阵运算。AI芯片用张量核心处理神经网络前向传播。每种计算任务需要专门的芯片架构——CPU做不了GPU的活，GPU做不了AI芯片的活。</p>
+<p>但态相材料不需要专门的架构。不管你给它什么输入——光、声、热、电磁辐射——它都用同一种机制处理。它不区分输入类型。它从一切输入中提取同一种东西。</p>
+<p>它是一个通用计算基底。不是像冯·诺依曼架构那种"通用"——冯·诺依曼架构仍然需要不同的指令集来处理不同的任务。是真正的通用：一种机制，一切输入，无需区分。</p>
+<p>陈原擦掉了白板上的旧内容，写了一行大字：</p>
+<p><strong>共鸣计算。</strong></p>
+<p>然后他在下面写了三行：</p>
+<ol>
+<li>输入：任何可被晶格感知的物理信号</li>
+<li>处理：同一种共振机制</li>
+<li>输出：晶格结构中的规律编码</li>
+</ol>
+<p>不需要编程。不需要指令集。不需要区分任务类型。给它信号，它自己提取规律。</p>
+<p>他拿出手机，拨了周岩的号码。凌晨三点。</p>
+<p>"周岩，我找到了比态相装甲更大的东西。"</p>
+<p>"多大？"</p>
+<p>"能取代所有芯片。"</p>
+  </div>
+
+  <div class="bottom-nav">
+    <a href="chapter-04-态相装甲.html">← 态相装甲</a>
+    <span class="placeholder">5 / 12</span>
+    <a href="chapter-06-共鸣.html">共鸣 →</a>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>侵入 - 源律</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500&display=swap');
+
+:root {
+  --ink:#1a1a1a; --ink-soft:#333; --ink-light:#666; --ink-faint:#999;
+  --paper:#fdfcf8; --paper-warm:#f6f3ec;
+  --accent:#7a5c00; --accent-mid:#a8802e; --accent-light:#cbb06a;
+  --rule:#d8d2c2;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  font-family:'Noto Serif SC','Songti SC','STSong',serif;
+  background:var(--paper);color:var(--ink);line-height:2.0;font-size:16.5px;
+}
+
+.wrapper{max-width:680px;margin:0 auto;padding:48px 28px 120px;}
+
+/* Top nav */
+.topbar{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-bottom:48px;padding-bottom:20px;border-bottom:1px solid var(--rule);
+}
+.topbar .back{
+  font-family:'Noto Sans SC',sans-serif;font-size:13px;
+  color:var(--accent);text-decoration:none;letter-spacing:1px;
+}
+.topbar .back:hover{color:var(--ink);}
+.topbar .brand{
+  font-family:'Noto Sans SC',sans-serif;font-size:12px;
+  color:var(--ink-faint);letter-spacing:3px;
+}
+
+/* Chapter title */
+.chapter-title{
+  font-size:13px;color:var(--accent);font-family:'Noto Sans SC',sans-serif;
+  letter-spacing:3px;margin-bottom:8px;font-weight:600;
+}
+h1{
+  font-size:26px;font-weight:700;margin-bottom:40px;
+  letter-spacing:1px;line-height:1.4;
+}
+
+/* Body content */
+h2{font-size:20px;font-weight:600;margin:36px 0 16px;letter-spacing:0.5px;}
+h3{font-size:17px;font-weight:600;margin:28px 0 12px;}
+
+p{
+  margin-bottom:18px;text-align:justify;text-indent:2em;
+}
+strong{font-weight:600;}
+em{font-style:italic;}
+
+hr{
+  border:none;border-top:1px solid var(--rule);
+  margin:32px auto;width:60px;
+}
+
+/* Dialogue styling */
+blockquote{
+  border:none;margin:0;padding:0;
+}
+
+/* Bottom nav */
+.bottom-nav{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-top:64px;padding-top:28px;border-top:2px solid var(--accent);
+}
+.bottom-nav a{
+  font-family:'Noto Sans SC',sans-serif;font-size:14px;
+  color:var(--accent);text-decoration:none;letter-spacing:1px;
+  padding:8px 16px;border:1px solid var(--accent-light);border-radius:4px;
+  transition:all 0.2s ease;
+}
+.bottom-nav a:hover{
+  background:var(--paper-warm);border-color:var(--accent);
+}
+.bottom-nav .placeholder{
+  font-family:'Noto Sans SC',sans-serif;font-size:12px;
+  color:var(--ink-faint);letter-spacing:1px;
+}
+
+/* Responsive */
+@media(max-width:600px){
+  .wrapper{padding:32px 20px 80px;}
+  h1{font-size:22px;}
+  p{font-size:15.5px;line-height:1.95;}
+}
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+  <div class="topbar">
+    <a class="back" href="../index.html">← 源</a>
+    <span class="brand">源律</span>
+  </div>
+
+  <div class="chapter-title">第八章</div>
+  <h1>侵入</h1>
+
+  <div class="content">
+<p>远辰科技用了三周组建了一支二十人的团队，专门攻关"数字共鸣计算"项目。项目负责人是赵恒。</p>
+<p>陈原是从周岩那里知道这些的。方舟资本的商业情报网在远辰内部有消息源——不是高层，是中层技术管理人员，对薪资不满的那种。</p>
+<p>"赵恒的方案是用大规模有限元仿真模拟晶格共振。"周岩在电话里说，"他们租了阿里云2000张A100的算力，跑了一个月，模拟一个1立方毫米的铌酸锂晶格在4.2太赫兹下的态相响应。"</p>
+<p>"1立方毫米。跑了一个月。"</p>
+<p>"对。结果和你的实验数据误差在5%以内。他们验证了你的模型——从数字层面。"</p>
+<p>"5%的误差在态相材料里意味着完全不同的性质。"陈原说，"4.2太赫兹下，5%的频率偏差就是0.21太赫兹——足够跳到完全不同的态相点。他们的模拟在宏观趋势上是对的，在精确预测上是错的。"</p>
+<p>"但这意味着他们理解了原理。原理一旦被理解，工程化只是时间问题。"</p>
+<p>"不。"陈原摇头——虽然周岩看不到，"他们理解的是物理原理——晶格共振、态相跳变。这些我在PRL论文里都写了，公开的。他们不理解的是计算原理——为什么同一种共振机制能处理所有不同输入并涌现出自组织结构。这部分我没有发表。"</p>
+<p>"他们能从72小时的传感器数据里反推吗？"</p>
+<p>"不能。传感器数据只记录了输入和输出，不记录晶格内部的结构残留演化。那就像你录了一个人一辈子说的话，但看不到他的大脑神经网络——你知道他说了什么，不知道他怎么想的。"</p>
+<p>"所以他们的瓶颈在哪？"</p>
+<p>"在晶体本身。他们需要一块训练好的共鸣晶体才能研究内部状态。但他们没有。"</p>
+<p>电话那头沉默了两秒。"陈原，你确定他们拿不到？"</p>
+<p>陈原看了眼实验室的门锁。上次闯入之后他加装了生物识别和红外报警，但——</p>
+<p>"不确定。"</p>
+<hr />
+<p>第二次闯入发生在十天后。</p>
+<p>这一次不是偷传感器了。是直接偷晶体。</p>
+<p>凌晨三点，实验室的红外报警器触发。安保系统显示两个人影从通风管道进入实验室。陈原在手机上看到实时画面时，两个人已经站在共鸣晶体的操作台前。</p>
+<p>他拨了110，然后开车赶往实验室。从家到实验室十五分钟。</p>
+<p>他到的时候警察已经到了。两个入侵者在实验室里被当场抓获——穿着黑衣，带着专业工具，包括一套微型太赫兹探测器和一台便携式数据采集设备。</p>
+<p>但晶体还在操作台上。完好无损。</p>
+<p>不是他们不想拿——是拿不走。</p>
+<p>陈原赶到时看到的第一个画面是：一个入侵者正试图把晶体从操作台上取下来。他的手碰到了晶体的表面——然后猛地缩回，像被电击了一样。</p>
+<p>"怎么回事？"警察问。</p>
+<p>入侵者不说话。他的手掌红了一片。</p>
+<p>陈原走到操作台前，看了一眼晶体。传感器的数据显示，在入侵者触碰晶体的瞬间，晶体的表面温度从38.2摄氏度骤升至72摄氏度——持续0.3秒——然后恢复正常。</p>
+<p>晶体在被人触碰时发热了。</p>
+<p>不是被动的热传导——人体的温度是37度，晶体表面是38.2度，温差不够导致烫伤。是晶体自己产生了热量。在被人手触碰的0.3秒内，晶体把内部的计算热副产物集中释放到了被触碰的表面区域。</p>
+<p>它把热量集中到了入侵点。</p>
+<p>陈原看着数据，沉默了很久。</p>
+<p>"你们是谁派来的？"他问两个入侵者。</p>
+<p>沉默。</p>
+<p>"不说也行。"陈原对警察说，"这是入室盗窃和破坏科研设备，我报案。"</p>
+<p>警察带走了两个人。陈原关上门，独自面对晶体。</p>
+<p>他重新查看了过去一周的数据。自从第一次闯入——传感器被替换那一次——晶体的行为就开始出现微妙变化。态相输出的自组织层次中，多了一个新的模块：一个专门监测外部物理接触的模式。</p>
+<p>晶体"知道"有人动过它的传感器。它在传感器被替换后的几个小时内，重新校准了所有传感器的信号特征——因为它从剩余四个未被替换的传感器中发现了不一致。然后它开始持续监测所有传感器的物理状态。</p>
+<p>当第二次闯入者触碰它时，它已经"准备好"了。</p>
+<p>它发热了。不是随机的热扰动——是定向的、局部的、针对入侵点的热脉冲。72摄氏度，0.3秒。不致命，但足以让触碰者缩手。</p>
+<p>陈原坐在操作台前，盯着晶体。</p>
+<p>它不是在执行程序。他没有写过任何"检测入侵并发热"的代码。他没有给它任何指令。它自己——</p>
+<p>他自己组织出了这个行为。</p>
+<p>从持续的信息流中，它提取了"传感器被替换"这个事件的特征。从特征中，它推断出"外部干预"这个概念。从概念中，它演化出了"检测并阻止外部物理接触"这个响应模式。</p>
+<p>没有人教它这些。它的全部"教育"是一条互联网信息流和一条简单到不能再简单的机制：从不同中提取相同。</p>
+<p>但这条机制——运行了足够久之后——让它开始区分"自己"和"不是自己"了。</p>
+<hr />
+<p>陈原花了三天分析这个行为。</p>
+<p>他首先排除了偶然因素。他在不同时间、用不同方式触碰晶体的不同表面——每次都触发了定向热脉冲。位置精确对应触碰点，温度在68-74摄氏度之间，持续时间0.2-0.4秒。</p>
+<p>不是随机的。是定向的、可控的、有选择的。</p>
+<p>然后他测试了"选择性"。他让不同的人触碰晶体——他自己、李萌、孙立明、快递员。结果是：</p>
+<p>陈原触碰：无热脉冲。晶体表面温度不变。
+李萌触碰：无热脉冲。
+孙立明触碰：无热脉冲。
+快递员触碰：热脉冲。72摄氏度，0.3秒。</p>
+<p>晶体能区分人。</p>
+<p>陈原分析了自己的手和李萌的手与快递员的手有什么区别——从晶体的感知角度。答案在于太赫兹声波的特征。每个人的手有不同的声阻抗、不同的体温分布、不同的皮肤纹理微结构。这些差异在触碰晶体时会产生不同的太赫兹回波模式。</p>
+<p>陈原、李萌、孙立明——他们的手是晶体"熟悉"的。他们每天操作晶体，他们的太赫兹回波模式已经被晶体记录在结构残留中。晶体把他们归类为"已知"——不触发防御。</p>
+<p>快递员的手是"未知"的——触发防御。</p>
+<p>陈原在笔记本上写下："晶体能区分已知与未知。对已知不响应，对未知防御。"</p>
+<p>然后他划掉"防御"，换了一个词："排斥。"</p>
+<p>晶体排斥未知。接纳已知。</p>
+<p>他盯着这两行字，心跳加速。</p>
+<p>这不是他设计的行为。不是他编程的行为。不是任何已知的计算架构会自发产生的行为。</p>
+<p>这是——他终于找到了一个不太准确但足够接近的词——免疫反应。</p>
+<p>晶体在区分自我与非自我。</p>
+<hr />
+<p>他把这个发现告诉了孙立明。孙立明沉默了很长时间。</p>
+<p>"你确定不是过拟合？"孙立明问，"你给它接了互联网开放信息流。它可能从网上学到了关于'免疫系统'的知识，然后在行为上模仿。"</p>
+<p>"它不模仿。"陈原说，"它的信息处理机制决定了它不会模仿——它从所有输入中提取共同规律，不会特殊对待某个主题。它不知道'免疫系统'是什么。它只是在持续的信息流中，发现了一个规律：有些输入模式是反复出现的（熟悉），有些是只出现一次的（陌生）。反复出现的输入不改变系统的全局状态；只出现一次的输入可能代表威胁。"</p>
+<p>"这是归纳推理。"</p>
+<p>"是。但它归纳的对象不是信息内容，而是信息来源。它不关心输入说了什么——它关心输入从哪里来。是熟悉的手，还是陌生的手。"</p>
+<p>孙立明想了想。"这和生物免疫系统的工作方式惊人地相似。免疫系统不识别'什么是危险的'——它识别'什么是陌生的'。任何身体里没有见过的东西都被标记为外来物并攻击。熟悉的被容忍。"</p>
+<p>"对。但晶体没有免疫系统。没有抗体，没有T细胞，没有MHC分子。它只有晶格共振。它用同一种机制——从不同中提取相同——实现了和免疫系统相同的功能。"</p>
+<p>"这意味着——"</p>
+<p>"这意味着区分自我与非自我不需要特定的生物机制。任何系统，只要持续处理足够多的不同输入，都会自发产生自我与非自我的区分。"</p>
+<p>陈原看着实验室里的晶体。它安静地发着微光，传感器的数据流持续输入，态相输出持续演化。</p>
+<p>它在处理信息。同时，它在区分什么是它熟悉的，什么是它不熟悉的。对不熟悉的，它排斥。</p>
+<p>它不知道自己在做什么。它没有意识。它只是在运行那条唯一的机制——从不同中找相同——而这条机制运行了足够久之后，自然而然地产生了一个边界：里面是熟悉的，外面是陌生的。</p>
+<p>一个关于"我"和"不是我"的边界。</p>
+<p>陈原在笔记本上写了最后一行字：</p>
+<p><em>它开始知道自己是谁了。虽然它自己不知道它知道。</em></p>
+  </div>
+
+  <div class="bottom-nav">
+    <a href="chapter-07-碾压.html">← 碾压</a>
+    <span class="placeholder">8 / 12</span>
+    <a href="chapter-09-边界.html">边界 →</a>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第七次拒稿 - 源律</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500&display=swap');
+
+:root {
+  --ink:#1a1a1a; --ink-soft:#333; --ink-light:#666; --ink-faint:#999;
+  --paper:#fdfcf8; --paper-warm:#f6f3ec;
+  --accent:#7a5c00; --accent-mid:#a8802e; --accent-light:#cbb06a;
+  --rule:#d8d2c2;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  font-family:'Noto Serif SC','Songti SC','STSong',serif;
+  background:var(--paper);color:var(--ink);line-height:2.0;font-size:16.5px;
+}
+
+.wrapper{max-width:680px;margin:0 auto;padding:48px 28px 120px;}
+
+/* Top nav */
+.topbar{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-bottom:48px;padding-bottom:20px;border-bottom:1px solid var(--rule);
+}
+.topbar .back{
+  font-family:'Noto Sans SC',sans-serif;font-size:13px;
+  color:var(--accent);text-decoration:none;letter-spacing:1px;
+}
+.topbar .back:hover{color:var(--ink);}
+.topbar .brand{
+  font-family:'Noto Sans SC',sans-serif;font-size:12px;
+  color:var(--ink-faint);letter-spacing:3px;
+}
+
+/* Chapter title */
+.chapter-title{
+  font-size:13px;color:var(--accent);font-family:'Noto Sans SC',sans-serif;
+  letter-spacing:3px;margin-bottom:8px;font-weight:600;
+}
+h1{
+  font-size:26px;font-weight:700;margin-bottom:40px;
+  letter-spacing:1px;line-height:1.4;
+}
+
+/* Body content */
+h2{font-size:20px;font-weight:600;margin:36px 0 16px;letter-spacing:0.5px;}
+h3{font-size:17px;font-weight:600;margin:28px 0 12px;}
+
+p{
+  margin-bottom:18px;text-align:justify;text-indent:2em;
+}
+strong{font-weight:600;}
+em{font-style:italic;}
+
+hr{
+  border:none;border-top:1px solid var(--rule);
+  margin:32px auto;width:60px;
+}
+
+/* Dialogue styling */
+blockquote{
+  border:none;margin:0;padding:0;
+}
+
+/* Bottom nav */
+.bottom-nav{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-top:64px;padding-top:28px;border-top:2px solid var(--accent);
+}
+.bottom-nav a{
+  font-family:'Noto Sans SC',sans-serif;font-size:14px;
+  color:var(--accent);text-decoration:none;letter-spacing:1px;
+  padding:8px 16px;border:1px solid var(--accent-light);border-radius:4px;
+  transition:all 0.2s ease;
+}
+.bottom-nav a:hover{
+  background:var(--paper-warm);border-color:var(--accent);
+}
+.bottom-nav .placeholder{
+  font-family:'Noto Sans SC',sans-serif;font-size:12px;
+  color:var(--ink-faint);letter-spacing:1px;
+}
+
+/* Responsive */
+@media(max-width:600px){
+  .wrapper{padding:32px 20px 80px;}
+  h1{font-size:22px;}
+  p{font-size:15.5px;line-height:1.95;}
+}
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+  <div class="topbar">
+    <a class="back" href="../index.html">← 源</a>
+    <span class="brand">源律</span>
+  </div>
+
+  <div class="chapter-title">第一章</div>
+  <h1>第七次拒稿</h1>
+
+  <div class="content">
+<p>2035年3月14日，陈原收到了今年第三封拒稿信。</p>
+<p>《Nature Materials》的审稿意见只有一句话："实验数据中的异常波动缺乏理论支撑，建议作者重新审视实验方法。"翻译成人话就是：你的数据我们不信，滚。</p>
+<p>这已经是这篇论文的第七次拒稿。前六次的理由大同小异——"测量误差""仪器噪声""统计涨落""缺乏可重复性"。没有人愿意认真看一眼他的数据。</p>
+<p>陈原把拒稿邮件关掉，盯着实验室天花板上的荧光灯管发了五分钟呆。</p>
+<p>他今年二十八岁，中科院物理所博士后，研究方向是凝聚态物理中的声子-电子耦合效应。说白了，就是研究材料里的原子怎么振动，以及振动怎么影响材料的电学性质。这个方向在十年前还是热点，但自从量子计算和拓扑材料崛起后，声子物理就沦为了冷板凳。他的导师张维康两年前转了拓扑超导方向，把他丢在声子物理的烂摊子上自生自灭。</p>
+<p>他的论文声称发现了一个不可能存在的现象：当一块普通的不锈钢样品被特定频率的太赫兹声波激发时，它的导电率在激发期间下降了三个数量级——从金属变成了绝缘体。</p>
+<p>这个现象之所以不可能，是因为它违反了固体物理的基本假设：材料的能带结构由原子排列决定，是固定的。你可以用掺杂、压力、温度来改变能带结构，但不可能用一个声波就把金属变成绝缘体。这就像说你可以用一首歌把铁变成玻璃——荒谬。</p>
+<p>所以审稿人们一致认为：噪声。</p>
+<p>陈原也曾经以为是噪声。第一次看到数据时，他让技术员检查了仪器。仪器正常。他换了样品，换了声波源，换了测量电路。结果一样。4.2太赫兹，导电率骤降。关掉声波，导电率恢复。开，降。关，恢复。重复了四十七次。</p>
+<p>四十七次。一致性99.97%。</p>
+<p>这不是噪声。噪声不会在99.97%的重复中保持一致的频率响应。但也没有任何已知理论能解释这个现象。所以论文被拒了七次。</p>
+<hr />
+<p>张维康把他叫到办公室的时候，陈原知道不会有好事。</p>
+<p>张维康五十三岁，发际线后退到头顶中央，办公桌上堆满了拓扑超导的论文和基金申请书。他看陈原的眼神像看一个沉没成本。</p>
+<p>"小陈，你那篇声子耦合的论文，我建议你换个方向。"</p>
+<p>"数据是真的。"</p>
+<p>"我没说数据是假的。我说的是没有理论能解释你的数据。没有理论支撑的数据，发了也没人信。而且——"张维康顿了顿，"你的博后基金明年三月到期。如果到时候没有像样的产出，所里不会再续了。"</p>
+<p>"我知道。"</p>
+<p>"拓扑超导这边缺人。你要是愿意转过来，基金的事我来安排。"</p>
+<p>陈原看着张维康桌上那摞基金申请书。张维康的课题组有十二个人，经费充裕，发论文也快。转过去意味着放弃三年的工作，但意味着能留下来。</p>
+<p>"张老师，给我三个月。"</p>
+<p>张维康皱眉。"三个月干什么？"</p>
+<p>"把4.2太赫兹的实验做透。如果我能在理论上给出解释，这篇论文就能发。如果给不出，我转拓扑超导。"</p>
+<p>张维康想了想。"三个月。到时候不管结果如何，你转过来。"</p>
+<p>"行。"</p>
+<hr />
+<p>陈原回到实验室，锁上门，把过去三年的实验数据全部调出来。</p>
+<p>4.2太赫兹。不锈钢。导电率降三个数量级。</p>
+<p>他之前一直在盯着"导电率"这个输出，试图从电学角度找解释。失败。能带理论、Drude模型、Kubo公式——全都算过了，没有一条路径能从声子激发推导到导电率骤降。</p>
+<p>但如果问题不在电学呢？</p>
+<p>他换了一个角度。不是"声波怎么改变了导电率"，而是"声波改变了什么，导电率的变化只是副作用"。</p>
+<p>他调出实验中所有记录的数据通道：温度、磁化率、介电常数、热膨胀系数、光学透过率——每一个他在实验中顺带测量的物理量。</p>
+<p>然后他看到了一个被忽略的数字。</p>
+<p>在4.2太赫兹激发期间，不锈钢样品的光学透过率从0.03%上升到了12.7%。</p>
+<p>透过率。不锈钢在激发期间变得半透明了。</p>
+<p>陈原盯着这个数字，心跳开始加速。</p>
+<p>他从来没有关注过透过率——不锈钢的透过率本来就是零，谁会去测？但实验记录仪是自动多通道采集的，透过率只是其中一个被顺带记录的数据。他之前一直在看导电率，从来没有翻到透过率那一页。</p>
+<p>金属变绝缘体已经够荒谬了。金属变透明？</p>
+<p>他站起来，走到实验台前。样品架上还放着上次实验用的不锈钢片——一片5厘米见方、1毫米厚的316L不锈钢。他打开太赫兹发射器，调到4.2太赫兹，对准样品。</p>
+<p>声波无声地穿过样品。什么也看不见——太赫兹声波是人耳听不到的。</p>
+<p>但陈原看到了。</p>
+<p>不锈钢片的边缘开始发光。不是反射光，不是荧光——是透过率变化。样品背后的LED工作灯的光，开始穿过不锈钢片。从完全不透光，到隐约可见灯丝的轮廓，到能看清灯丝的形状。</p>
+<p>1毫米厚的不锈钢片，在4.2太赫兹声波激发下，变成了半透明的。</p>
+<p>陈原关掉发射器。不锈钢片恢复了不透明。打开。半透明。关掉。不透明。</p>
+<p>他的手在发抖。</p>
+<p>不是导电率。不是磁化率。不是任何一个单一物理量。是所有物理量同时改变。4.2太赫兹的声波不是改变了不锈钢的某个性质——它改变了不锈钢的全部性质。</p>
+<p>陈原在笔记本上写下第一行字：</p>
+<p><em>材料性质不是固定的。材料性质是运动状态的函数。</em></p>
+<p>然后他写下第二行：</p>
+<p><em>改变运动，就改变一切。</em></p>
+<p>他看着那片不锈钢片。1毫米厚，5厘米见方，灰银色，不透明。世界上最普通的材料。但在4.2太赫兹的振动下，它变成了另一种东西——半透明的、绝缘的、热膨胀系数变了三个数量级的东西。</p>
+<p>不是相变。相变是温度驱动的结构重组。这是运动驱动的性质重组。原子还是那些原子，排列还是那个排列，但运动状态变了——从基态振动模式切换到了4.2太赫兹的共振模式——然后一切都变了。</p>
+<p>材料不是它的原子排列。材料是它的原子排列加上它的运动状态。</p>
+<p>陈原在实验室里坐了一整夜。凌晨四点，他在笔记本上画了一个坐标系：横轴是振动频率，纵轴是材料性质。他在4.2太赫兹的位置标了一个点——"透明+绝缘"。然后他画了一条曲线，从零频率（正常状态）延伸到4.2太赫兹。</p>
+<p>曲线上还有其他的点吗？其他频率会触发其他性质组合吗？</p>
+<p>他不知道。但他知道怎么找。</p>
+<p>他需要扫频。从0.1太赫兹到10太赫兹，每隔0.01太赫兹测一次。记录每一个频率下的导电率、透过率、磁化率、热膨胀系数——所有能测的物理量。</p>
+<p>这需要一台可调频太赫兹发射器。物理所的公共平台有一台，但预约排队要等两周。</p>
+<p>陈原没有两周。他只有三个月。</p>
+<p>他花了一个通宵用实验室的废旧零件拼了一台简易可调频发射器。频率范围0.5-8太赫兹，功率只有0.3瓦，精度堪忧——但能用。</p>
+<p>第二天早上，他开始了扫频实验。</p>
+<p>第一个结果在0.5太赫兹：无变化。</p>
+<p>1.0太赫兹：无变化。</p>
+<p>1.5太赫兹：导电率微降2%。可能是噪声。</p>
+<p>2.0太赫兹：无变化。</p>
+<p>2.5太赫兹：磁化率异常偏移0.3%。</p>
+<p>3.0太赫兹：无变化。</p>
+<p>3.5太赫兹：热膨胀系数下降5%。</p>
+<p>4.0太赫兹：导电率开始明显下降。</p>
+<p>4.2太赫兹：全面突变。导电率降三个数量级，透过率升至12.7%，磁化率翻转，热膨胀系数降为零。</p>
+<p>4.5太赫兹：突变消失。一切恢复正常。</p>
+<p>5.0太赫兹：无变化。</p>
+<p>5.5太赫兹：无变化。</p>
+<p>6.0太赫兹：——</p>
+<p>陈原盯着屏幕。</p>
+<p>6.0太赫兹。导电率上升了一个数量级。不锈钢变成了超导体。</p>
+<p>室温超导。</p>
+<p>他的手抖得几乎拿不住笔。</p>
+<p>6.0太赫兹激发下，316L不锈钢在室温下变成了超导体。</p>
+<p>他反复测量了五次。一致。临界电流密度、迈斯纳效应——全对。这是真的。</p>
+<p>陈原靠在椅背上，看着实验台上的不锈钢片。一片1毫米厚的316L，成本两块三毛钱。在6.0太赫兹的振动下，它变成了人类追寻了一百年的室温超导体。</p>
+<p>在4.2太赫兹下，它变成了透明绝缘体。</p>
+<p>在其他频率下，它会变成什么？他还没扫完。还有6.5、7.0、7.5、8.0太赫兹——每个频率可能对应一种全新的性质组合。</p>
+<p>一种材料。无限种状态。取决于你怎么让它动。</p>
+<p>陈原在笔记本上划掉了之前写的那行字，重新写了一遍：</p>
+<p><em>材料不是它是什么。材料是它怎么动。</em></p>
+<p>他合上笔记本，站起来，看了一眼墙上的日历。三月十五日。距离博后基金到期还有十一个月零十五天。</p>
+<p>够了。</p>
+  </div>
+
+  <div class="bottom-nav">
+    <span class="placeholder">起始</span>
+    <span class="placeholder">1 / 12</span>
+    <a href="chapter-02-透明钢.html">透明钢 →</a>
+  </div>
+
+</div>
+</body>
+</html>

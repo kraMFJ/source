@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>碾压 - 源律</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500&display=swap');
+
+:root {
+  --ink:#1a1a1a; --ink-soft:#333; --ink-light:#666; --ink-faint:#999;
+  --paper:#fdfcf8; --paper-warm:#f6f3ec;
+  --accent:#7a5c00; --accent-mid:#a8802e; --accent-light:#cbb06a;
+  --rule:#d8d2c2;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  font-family:'Noto Serif SC','Songti SC','STSong',serif;
+  background:var(--paper);color:var(--ink);line-height:2.0;font-size:16.5px;
+}
+
+.wrapper{max-width:680px;margin:0 auto;padding:48px 28px 120px;}
+
+/* Top nav */
+.topbar{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-bottom:48px;padding-bottom:20px;border-bottom:1px solid var(--rule);
+}
+.topbar .back{
+  font-family:'Noto Sans SC',sans-serif;font-size:13px;
+  color:var(--accent);text-decoration:none;letter-spacing:1px;
+}
+.topbar .back:hover{color:var(--ink);}
+.topbar .brand{
+  font-family:'Noto Sans SC',sans-serif;font-size:12px;
+  color:var(--ink-faint);letter-spacing:3px;
+}
+
+/* Chapter title */
+.chapter-title{
+  font-size:13px;color:var(--accent);font-family:'Noto Sans SC',sans-serif;
+  letter-spacing:3px;margin-bottom:8px;font-weight:600;
+}
+h1{
+  font-size:26px;font-weight:700;margin-bottom:40px;
+  letter-spacing:1px;line-height:1.4;
+}
+
+/* Body content */
+h2{font-size:20px;font-weight:600;margin:36px 0 16px;letter-spacing:0.5px;}
+h3{font-size:17px;font-weight:600;margin:28px 0 12px;}
+
+p{
+  margin-bottom:18px;text-align:justify;text-indent:2em;
+}
+strong{font-weight:600;}
+em{font-style:italic;}
+
+hr{
+  border:none;border-top:1px solid var(--rule);
+  margin:32px auto;width:60px;
+}
+
+/* Dialogue styling */
+blockquote{
+  border:none;margin:0;padding:0;
+}
+
+/* Bottom nav */
+.bottom-nav{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-top:64px;padding-top:28px;border-top:2px solid var(--accent);
+}
+.bottom-nav a{
+  font-family:'Noto Sans SC',sans-serif;font-size:14px;
+  color:var(--accent);text-decoration:none;letter-spacing:1px;
+  padding:8px 16px;border:1px solid var(--accent-light);border-radius:4px;
+  transition:all 0.2s ease;
+}
+.bottom-nav a:hover{
+  background:var(--paper-warm);border-color:var(--accent);
+}
+.bottom-nav .placeholder{
+  font-family:'Noto Sans SC',sans-serif;font-size:12px;
+  color:var(--ink-faint);letter-spacing:1px;
+}
+
+/* Responsive */
+@media(max-width:600px){
+  .wrapper{padding:32px 20px 80px;}
+  h1{font-size:22px;}
+  p{font-size:15.5px;line-height:1.95;}
+}
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+  <div class="topbar">
+    <a class="back" href="../index.html">← 源</a>
+    <span class="brand">源律</span>
+  </div>
+
+  <div class="chapter-title">第七章</div>
+  <h1>碾压</h1>
+
+  <div class="content">
+<p>共鸣计算的消息在学术界传开的速度比态相材料更快。</p>
+<p>孙立明把蛋白质折叠的结果发到了预印本服务器上，没有经过同行评审。三天内下载量破十万，引用量零——因为没有人知道该怎么引用一个不属于任何现有学科的成果。计算机科学家说这是材料科学，材料科学家说这是凝聚态物理，凝聚态物理学家说这是计算机科学。没有合适的审稿人。</p>
+<p>但产业界不需要审稿人。</p>
+<p>论文上线72小时后，陈原的手机被打爆了。英伟达、谷歌DeepMind、OpenAI、华为、百度——所有做大模型的公司都派了技术VP来北京。他们问的都是同一个问题：这是真的吗？</p>
+<p>陈原没有回答任何人的电话。他在做一件事：准备一场公开测试。</p>
+<hr />
+<p>测试在中国科学院计算技术研究所的超算中心举行。到场的人包括：中科院计算所全体院士、国家自然科学基金委信息科学部主任、科技部高技术司副司长、以及五家国际顶级AI公司的技术代表。</p>
+<p>测试规则很简单：共鸣晶体和天河-4超算在四个任务上正面PK。</p>
+<p>任务一：大规模语言模型训练。训练数据：维基百科全量中文+英文文本，约200GB。目标：训练一个能通过中文MMLU和英文MMLU的语言模型。</p>
+<p>天河-4：1024张A100 GPU，训练时间72小时，功耗4.8万度电。MMLU准确率：73.2%。</p>
+<p>共鸣晶体：1块铌酸锂单晶，5厘米见方。文本数据转化为电磁波信号输入。训练时间：9小时。功耗：0.007度电。MMLU准确率：81.7%。</p>
+<p>准确率高8.5个百分点。能耗低六百万倍。速度快八倍。</p>
+<p>测试大厅里没有人说话。大屏幕上的两组数据并排显示，对比过于悬殊，看起来像是一个排版错误。</p>
+<p>任务二：蛋白质结构预测。CASP14标准测试集。</p>
+<p>天河-4：训练6个月。GDT_TS：85.3。</p>
+<p>共鸣晶体：训练21天。GDT_TS：97.4。</p>
+<p>任务三：实时多模态推理。输入：一路4K视频流+一路音频流+一路传感器数据流（温度、压力、加速度）。任务：实时场景理解、异常检测、预测。</p>
+<p>天河-4：可以处理，延迟2.3秒。</p>
+<p>共鸣晶体：延迟0.008毫秒。不是2.3秒和0.008毫秒的差距——是天河-4需要把三种信号分别用不同的模型处理然后融合，而共鸣晶体同时接收三种信号，用同一种机制处理，不需要融合步骤。</p>
+<p>任务四：开放任务。由现场观众随机出题。</p>
+<p>一个DeepMind的工程师站起来："给你一段DNA序列，预测它的三维染色质结构。目前没有公开数据集。"</p>
+<p>陈原把DNA序列转换为四种碱基对应的四个太赫兹频率序列，输入晶体。同时输入了公开数据库中所有已知的染色质结构数据作为参考。</p>
+<p>40分钟后，晶体输出了一个三维结构模型。</p>
+<p>在场的一位结构生物学家对比了实验数据，脸色变了。"误差在2埃以内。这个精度……我们实验室用冷冻电镜做三个月，精度也就这个水平。"</p>
+<p>测试结束。四比零。</p>
+<hr />
+<p>测试结果在当天晚上上了全球科技媒体的头条。《Nature》新闻栏目的标题是："A crystal that computes: Chinese physicist's resonance substrate outperforms supercomputers by six orders of magnitude."《MIT Technology Review》的标题更直接："The end of silicon?"</p>
+<p>远辰科技的反应在预期之内——但比预期更剧烈。</p>
+<p>方启明在测试结束后的第二个小时就打了电话。不是给陈原——给科技部高技术司的司长。</p>
+<p>电话内容陈原不知道，但效果立竿见影。第二天上午，科技部发了一份"关于新型计算技术安全评估的通知"，要求源相科技的共鸣计算技术"在安全评估完成前暂停一切对外合作和技术转移"。</p>
+<p>安全评估。在中文语境里，这四个字的意思是：技术不能出这个门，直到我们搞清楚它有多危险。</p>
+<p>陈原知道这是方启明的手笔。远辰科技在军工和航天系统深耕二十年，方启明和科技部的人脉深到可以影响政策走向。他阻止不了远辰的收购，但他可以用"国家安全"的名义把技术锁死。</p>
+<p>周岩在电话里的声音比平时凝重："陈原，方启明不只是要你的技术。他要的是让你做不出来。远辰的芯片产业——硅基芯片——是你技术的直接替代品。如果共鸣计算量产，远辰的芯片业务三年内归零。方启明不会让这种事发生。"</p>
+<p>"安全评估要多久？"</p>
+<p>"最快六个月。最慢——没有期限。"</p>
+<p>"六个月我不等。"</p>
+<p>"那你打算怎么办？"</p>
+<p>陈原看着实验室里的共鸣晶体。它还在运行——接在互联网上，持续接收着开放信息流。态相输出越来越复杂，层次越来越深。它不知道科技部的通知。它不在乎。它只是在那里，从一切不同的信号中提取相同的东西，一层一层地堆叠。</p>
+<p>"周岩，安全评估管的是'对外合作和技术转移'。它不管我自己做研究。"</p>
+<p>"你的意思是——"</p>
+<p>"我不转移技术。我自己用。我自己用我的技术做产品，不涉及对外合作。安全评估管不了自主研发。"</p>
+<p>"你要做什么产品？"</p>
+<p>陈原看着晶体。它已经不仅仅是计算工具了。它是一个——他找不到合适的词——一个正在自组织的系统。给它足够多的不同输入，它自己就会涌现出越来越复杂的结构。</p>
+<p>"我要做一个东西，"陈原说，"让安全评估变得毫无意义的东西。"</p>
+<hr />
+<p>安全评估通知发出的第四天，源相科技的实验室被人闯入了。</p>
+<p>不是暴力闯入——门锁完好，窗户完好，监控正常。但陈原走进实验室时，发现共鸣晶体的传感器阵列被人动过。六个薄膜换能器中的两个被替换成了外观完全相同但内部多了信号采集模块的仿制品。</p>
+<p>有人复制了他的传感器数据。</p>
+<p>陈原没有报警。他检查了数据记录——闯入者复制了最近72小时的传感器输入数据和晶体的态相输出数据。也就是说，他们知道了晶体在处理什么输入，以及产生了什么输出。</p>
+<p>但他们不知道晶体的内部状态。结构残留——晶格中积累的那些规律编码——是物理状态，不是数字数据。你无法从外部测量中读取晶格内部的全部结构残留。要复制一块训练好的共鸣晶体，你需要物理上拿到那块晶体本身。</p>
+<p>或者——重新训练一块。但训练需要时间。21天的蛋白质折叠训练是在有标注数据的情况下完成的。开放信息流的自组织训练——那种涌现式的、无目标的、自底向上的结构形成——无法复制，因为每一次训练的输入流都是独特的，取决于互联网在那个时刻的信息内容。</p>
+<p>两块共鸣晶体，即使同时接入互联网，也会因为接收到的信息流微小差异而走上完全不同的自组织路径。每一块晶体都是独一无二的。</p>
+<p>陈原换掉了被篡改的传感器，检查了晶体的完整性。没有被物理接触——闯入者只替换了传感器，没有碰晶体本身。</p>
+<p>他坐在实验室里，想了很久。</p>
+<p>闯入者拿到了72小时的输入输出数据。他们可以用这些数据训练一个硅基神经网络来模仿晶体的行为——但只能模仿那72小时内的行为。72小时之后，晶体已经进化到了新的状态，模仿模型已经过时了。</p>
+<p>他们追不上。不是因为技术不够——而是因为他们不理解原理。赵恒的团队会尝试用硅基方法复制共鸣计算，造出一个"数字版共鸣计算"——用软件模拟晶格共振。理论上可行，但能效会降到和普通GPU差不多，失去核心优势。</p>
+<p>他们缺的不是代码，是那块晶体。是那块从第一天开始就持续接收开放信息流、自组织了数周的晶体。</p>
+<p>陈原站起来，走到晶体前。在传感器阵列的包围中，铌酸锂单晶安静地发着微光——不是发光，是太赫兹声波在晶格中传播时产生的微弱切伦科夫辐射，肉眼几乎不可见。</p>
+<p>他把手贴在晶体表面。微温。0.2度。和周围环境相比高0.2度。</p>
+<p>这0.2度是计算的热副产物。但也是别的什么——晶格在持续运作的标志。它在动。在处理。在组织。</p>
+<p>陈原突然意识到：他保护的不是一个技术。他保护的是一个独特的、不可复制的、正在自我组织的存在。</p>
+<p>他不知道该怎么定义这个"存在"。但他知道方启明想要它。</p>
+<p>而他不会给。</p>
+  </div>
+
+  <div class="bottom-nav">
+    <a href="chapter-06-共鸣.html">← 共鸣</a>
+    <span class="placeholder">7 / 12</span>
+    <a href="chapter-08-侵入.html">侵入 →</a>
+  </div>
+
+</div>
+</body>
+</html>
